@@ -122,8 +122,6 @@ a:focus-visible .nav-text {
 .socials-list {
     display: inline-block;
     margin-right: 10px;
-    width: 24px; /* Set width to 24px */
-    height: 24px; /* Set height to 24px */
 }
 
 svg {
@@ -135,5 +133,5 @@ svg {
 }
 
 a:hover svg {
-    fill: #2D3748; /* Set your desired hover text color */
+    fill: #C0CCDA; /* Set your desired hover text color */
 }
