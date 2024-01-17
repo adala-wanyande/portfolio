@@ -112,3 +112,28 @@ a:hover .nav-text,
 a:focus-visible .nav-text {
     color: #C0CCDA;
 }
+
+.socials-unordered {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.socials-list {
+    display: inline-block;
+    margin-right: 10px;
+    width: 24px; /* Set width to 24px */
+    height: 24px; /* Set height to 24px */
+}
+
+svg {
+    fill: #91A1B8;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    transition: fill 0.3s ease;
+}
+
+a:hover svg {
+    fill: #2D3748; /* Set your desired hover text color */
+}
