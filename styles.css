@@ -1,5 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body {
+html {
     font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1F2937; /* Equivalent to bg-slate-900 */
+    line-height: 1.75; /* Equivalent to leading-relaxed */
+    color: #CBD5E0; /* Equivalent to text-slate-400 */
+}
+
+::selection {
+    background-color: #4FD1C5; /* Equivalent to selection:bg-teal-300 */
+    color: #1C3D5A; /* Equivalent to selection:text-teal-900 */
+}
+
+.background-overlay {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    transition: background 0.3s ease;
+    background: radial-gradient(600px at 596px 159px, rgba(29, 78, 216, 0.15), transparent 80%);
+}
+
+@media (min-width: 1024px) {
+    .background-overlay {
+        position: absolute;
+    }
+}
+
+h1 {
+    font-size: 2.25rem; /* Equivalent to text-4xl on small screens */
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    color: #CBD5E0; /* Equivalent to text-slate-200 */
+}
+
+h1 a {
+    text-decoration: none;
+    color: #CBD5E0; /* Equivalent to text-slate-200 */
+}
+
+@media (min-width: 640px) {
+    h1 {
+        font-size: 3rem; /* Equivalent to sm:text-5xl on larger screens */
+    }
+}
+
+h2 {
+    margin-top: 0.75rem; /* Equivalent to mt-3 */
+    font-size: 1.125rem; /* Equivalent to text-lg */
+    font-weight: medium;
+    letter-spacing: -0.02em;
+    color: #CBD5E0; /* Equivalent to text-slate-200 */
+}
+
+@media (min-width: 640px) {
+    h2 {
+        font-size: 1.5rem; /* Equivalent to sm:text-xl on larger screens */
+    }
+}
+
+p {
+    margin-top: 1rem;
+    max-width: 20rem;
+    line-height: 1.5;
+    color: #91A1B8;
+}
+
+nav ul {
+    margin-top: 2rem;
+    max-width: 20rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #64748B;
+}
+
+.nav-indicator {
+    margin-right: 1rem;
+    height: 1px;
+    width: 4rem;
+    background-color: #64748B;
+    transition: all 0.3s ease;
+}
+
+a:hover .nav-indicator,
+a:focus-visible .nav-indicator {
+    width: 8rem;
+    background-color: #C0CCDA;
+}
+
+.nav-text {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #64748B;
+    transition: color 0.3s ease;
+}
+
+a:hover .nav-text,
+a:focus-visible .nav-text {
+    color: #C0CCDA;
 }
