@@ -7,9 +7,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #1F2937; /* Equivalent to bg-slate-900 */
-    line-height: 1.75; /* Equivalent to leading-relaxed */
-    color: #CBD5E0; /* Equivalent to text-slate-400 */
+    background-color: #1F2937;
+    color: #CBD5E0; 
 }
 
 ::selection {
@@ -33,7 +32,6 @@ body {
 }
 
 h1 {
-    font-size: 2.25rem; 
     font-weight: bold;
     letter-spacing: -0.02em;
     color: #CBD5E0;
@@ -47,23 +45,20 @@ h1 a {
 
 
 h2 {
-    margin-top: 0.75rem;
-    font-size: 1.125rem; 
     font-weight: medium;
     letter-spacing: -0.02em;
     color: #CBD5E0; 
 }
 
 p {
-    margin-top: 1rem;
     max-width: 75%;
-    line-height: 1.5;
     color: #94A3B9;
+    font-size: 16px;
 }
-
+/* 
 nav ul {
-    max-width: 20rem;
-}
+
+} */
 
 li {
     list-style: none;
@@ -79,23 +74,20 @@ nav {
 }
 
 .nav-indicator {
-    margin-right: 1rem;
     height: 1px;
-    width: 4rem;
     background-color: #64748B;
     transition: all 0.3s ease;
 }
 
 a:hover .nav-indicator,
 a:focus-visible .nav-indicator {
-    width: 8rem;
     background-color: #C0CCDA;
 }
 
 .nav-text {
-    font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 12px;
     letter-spacing: 0.1em;
     color: #64748B;
     transition: color 0.3s ease;
@@ -143,16 +135,23 @@ a:hover svg {
     display: none;
 }
 
-@media screen and (max-width: 640px) {
-    h2 {
-        font-size: 1.5rem; 
-    }
+.experience-heading {
+    display: none;
+}
 
-    h1 {
-        font-size: 3rem; 
-    }
+@media screen and (max-width: 640px) {
+    /* h2 {
+    } */
+
+    /* h1 {
+        font-size: ; 
+    } */
 
     .about-heading {
+        display: block;
+    }
+
+    .experience-heading {
         display: block;
     }
 
@@ -161,4 +160,68 @@ a:hover svg {
     }
     
 }
+
+.sticky-container {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    margin-left: -6px;
+    margin-bottom: 4px;
+    width: 100%;
+    background: inherit;
+    backdrop-filter: blur(10px);
+  }
+
+.dates {
+    color: #5D6D86;
+    font-size: 12px;
+}
+  
+.job-title {
+    color: #55D5CB;
+    font-size: 16px;
+    display: inline-block;
+} 
+
+.company {
+    color: #55D5CB;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.company-svg {
+    height: 20px;
+    width: 20px;
+    min-width: 20px;
+}
+
+p.section-content {
+    font-size: 14px;
+}
+
+ul.technologies-list {
+    margin-top: 2px; 
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.technologies-list li {
+    margin-right: 4px;
+    margin-top: 2px;
+}
+
+div.tech-badge {
+    display: flex;
+    align-items: center;
+    border-radius: 9999px;
+    background-color: rgba(100, 200, 150, 0.1);
+    padding: 5px 12px; 
+    font-size: 12px; 
+    font-weight: 500; 
+    line-height: 1.5; 
+    color: #5AE0D1; 
+}
+
 
