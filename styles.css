@@ -160,6 +160,13 @@ a:hover svg {
     text-transform: uppercase;
 }
 
+.projects-heading {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
 @media screen and (max-width: 1023px) {
     /* h2 {
     } */
@@ -173,6 +180,10 @@ a:hover svg {
     }
 
     .experience-heading {
+        display: block;
+    }
+
+    .projects-heading {
         display: block;
     }
 
@@ -343,4 +354,31 @@ main::-webkit-scrollbar {
     .overlay {
         flex-direction: row;
     }
+}
+
+.image-container {
+    min-width: 120px; /* Adjust the width as needed */
+    height: 68px; /* Adjust the height as needed */
+    overflow: hidden;
+    margin-top: 16px;
+    margin-right: 20px; /* Adjust the margin between image and text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    border-radius: 4px;
+    border: 2px solid #ccc;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .experience-section {
+    margin-bottom: 24px;
+  }
+
+.projects-section {
+    margin-bottom: 40px;
 }
