@@ -16,14 +16,19 @@ body {
     color: #1C3D5A; /* Equivalent to selection:text-teal-900 */
 }
 
+
 .background-overlay {
     pointer-events: none;
-    position: fixed;
+    position: sticky;
     inset: 0;
     z-index: 30;
     transition: background 0.3s ease;
-    background: radial-gradient(600px at 596px 159px, rgba(29, 78, 216, 0.15), transparent 80%);
+    background: radial-gradient(circle, rgba(29, 78, 216, 0.15), transparent 40%);
+    background-size: 1200px 1200px; 
+    background-repeat: no-repeat; 
+    display: none;
 }
+   
 
 @media (min-width: 1024px) {
     .background-overlay {
