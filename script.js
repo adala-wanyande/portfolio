@@ -41,4 +41,18 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.style.display = 'none';
     overlay.classList.remove('background-overlay');
   });
+
+  // Handle the focused state for the navigation bar
+  const navItems = document.querySelectorAll('nav a');
+  navItems.forEach((navItem) => {
+    navItem.addEventListener('click', function () {
+      // Remove 'focused' class from all navigation items
+      navItems.forEach((item) => {
+        item.parentNode.classList.remove('focused');
+      });
+
+      // Add 'focused' class to the clicked navigation item's parent
+      this.parentNode.classList.add('focused');
+    });
+  });
 });
