@@ -56,3 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('html').classList.add('fade-in');
+});

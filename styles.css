@@ -2,7 +2,13 @@
 
 html {
     font-family: 'Inter', sans-serif;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; 
 }
+
+html.fade-in {
+    opacity: 1; /* Change opacity to 1 for the fade-in effect */
+  }
 
 body {
     margin: 0;
