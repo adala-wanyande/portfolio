@@ -394,3 +394,13 @@ main::-webkit-scrollbar {
 nav ul li.focused a span {
     color: #C0CCDA;
 }
+
+.project-links {
+    font-size: 12px;
+    color: #94A3B9;
+    margin-right: 8px;
+}
+
+.project-links:hover {
+    color: #C0CCDA;
+}
