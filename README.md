@@ -1,9 +1,9 @@
 # My Portfolio (V2)
 
-Welcome to my portfolio! This website showcases my skills, experience, and projects. This portfolio has been deployed using Netlify and you can access it [here](https://adalawanyande.netlify.app/).
+Welcome to my portfolio! This website showcases my skills, experience, and projects. This portfolio has been deployed using Netlify and you can access it [here](https://adala-wanyande.github.io/portfolio/).
 
 ## Credits
-The design of this portfolio was inspired by [Brittany Chang's portfolio](https://brittanychiang.com/). I would like to express my appreciation for her creative work, which served as inspiration for this project.
+The design of this portfolio was inspired by [Brittany Chiang's portfolio](https://brittanychiang.com/). I would like to express my appreciation for her creative work, which served as inspiration for this project.
 
 ## Table of Contents
 - [About](#about)
