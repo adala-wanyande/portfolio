@@ -45,7 +45,7 @@ h1 {
     font-weight: bold;
     letter-spacing: -0.02em;
     color: #CBD5E0;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 h1 a {
@@ -62,7 +62,7 @@ h2 {
 
 .mini-about {
     margin-top: 8px;
-    margin-bottom: 24px;
+    margin-bottom: 56px;
 }
 
 p {
@@ -280,8 +280,8 @@ header {
 }
 
 .image-container {
-    min-width: 120px;
-    height: 165px;
+    max-width: 600px;
+    /* height: 165px; */
     overflow: hidden;
     margin-top: 16px;
     margin-right: 20px; 
@@ -292,12 +292,12 @@ header {
     border: 2px solid #ccc;
 }
 
-@media screen and (min-width: 639px) {
+/* @media screen and (min-width: 639px) {
     .image-container {
         min-width: 120px;
         height: 68px;
       }
-}
+} */
 
 
 @media screen and (min-width: 1023px) {
@@ -312,14 +312,14 @@ header {
         height: 100%;
         max-height: 100vh;
         justify-content: space-between;
-        margin-left: 80px;
+        margin-left: 160px;
         margin-right: 80px;
     }
     
     main {
         width: 50%;
         height: 100vh;
-        margin-right: 80px;
+        margin-right: 160px;
         margin-left: 80px;
         overflow-y: scroll;
     }
@@ -329,7 +329,7 @@ header {
     }
 
     .about-content {
-        margin-top: 80px;
+        margin-top: 88px;
         margin-bottom: 80px;
     }
 }   
@@ -371,9 +371,9 @@ main::-webkit-scrollbar {
 
 
 @media screen and (min-width: 640px) {
-    .overlay {
+    /* .overlay {
         flex-direction: row;
-    }
+    } */
 }
 
   
@@ -403,4 +403,9 @@ nav ul li.focused a span {
 
 .project-links:hover {
     color: #C0CCDA;
+}
+
+.profile-image { 
+    margin-top: 96px;/* Adjust size as needed */
+    height: 300px; /* Adjust size as needed */
 }
