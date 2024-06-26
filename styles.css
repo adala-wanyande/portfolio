@@ -320,8 +320,13 @@ header {
         width: 50%;
         height: 100vh;
         margin-right: 160px;
-        margin-left: 80px;
+        margin-left: 160px;
         overflow-y: scroll;
+    }
+
+    .profile-image { 
+        margin-top: 96px;/* Adjust size as needed */
+        height: 300px; /* Adjust size as needed */
     }
 
     .socials-unordered {
@@ -407,5 +412,5 @@ nav ul li.focused a span {
 
 .profile-image { 
     margin-top: 96px;/* Adjust size as needed */
-    height: 300px; /* Adjust size as needed */
+    height: 250px; /* Adjust size as needed */
 }
