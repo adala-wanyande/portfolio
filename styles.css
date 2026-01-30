@@ -435,7 +435,7 @@ nav ul li.active .nav-text {
 .sticky-note {
     position: absolute;
     /* Position it to the right of the social icons */
-    left: 100px; 
+    left: 1000px; 
     top: -10px;
     width: 140px;
     background-color: #fef08a; /* Classic Sticky Note Yellow */
