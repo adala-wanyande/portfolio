@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* --- Reset & Base --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1F2937;
+    color: #CBD5E0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: rgba(31, 41, 55, 0.9);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-links-group {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #94A3B9;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #55D5CB;
+}
+
+/* --- Hero Section --- */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem 3rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #CBD5E0;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    color: #94A3B9;
+    font-size: 1.1rem;
+}
+
+/* --- Bento Grid Layout --- */
+.bento-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .bento-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .bento-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+    }
+    
+    /* Spanning logic for Bento effect */
+    .span-2 {
+        grid-column: span 2;
+    }
+    .span-row-2 {
+        grid-row: span 2;
+    }
+}
+
+/* --- Cards --- */
+.bento-card {
+    background-color: #2D3748;
+    /* border-radius: 16px; */
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.bento-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(85, 213, 203, 0.3);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #CBD5E0;
+    margin: 0 0 1rem 0;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #A0AEC0;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* --- Specific Section Styles --- */
+
+/* Badge Styles for Roles */
+.role-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+.role-badge {
+    background: rgba(85, 213, 203, 0.1);
+    color: #55D5CB;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Language Bars */
+.lang-item {
+    margin-bottom: 12px;
+}
+.lang-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #CBD5E0;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+.progress-bar {
+    height: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+.progress-fill {
+    height: 100%;
+    background: #55D5CB;
+}
+
+/* Action Buttons */
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.05);
+    color: #CBD5E0;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.action-btn:hover {
+    background: #55D5CB;
+    color: #1F2937;
+    border-color: #55D5CB;
+}
+
+.highlight {
+    color: #55D5CB;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #64748B;
+    font-size: 0.9rem;
+}
