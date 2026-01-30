@@ -64,6 +64,44 @@ function smoothScroll(e) {
   }
 }
 
+// Scroll-based navigation highlighting
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll("nav ul li");
+  const main = document.querySelector("main");
+
+  const observerOptions = {
+    root: main,
+    rootMargin: "-20% 0px -60% 0px",
+    threshold: 0,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const sectionId = entry.target.getAttribute("id");
+
+        navLinks.forEach((li) => {
+          li.classList.remove("active");
+          const link = li.querySelector("a");
+          if (link && link.getAttribute("href") === `#${sectionId}`) {
+            li.classList.add("active");
+          }
+        });
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
+  // Set initial active state
+  if (navLinks.length > 0) {
+    navLinks[0].classList.add("active");
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector("header");
   const main = document.querySelector("main");
