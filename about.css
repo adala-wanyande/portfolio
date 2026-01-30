@@ -33,9 +33,11 @@ a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.nav-links-group {
-    display: flex;
-    gap: 20px;
+.nav-brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #CBD5E0;
+    display: none; /* Hidden on mobile to save space */
 }
 
 .nav-link {
@@ -44,8 +46,12 @@ a {
     font-weight: 500;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover {
     color: #55D5CB;
+}
+
+@media (min-width: 768px) {
+    .nav-brand { display: block; }
 }
 
 /* --- Hero Section --- */
