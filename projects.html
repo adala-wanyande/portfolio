@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bernard Adala Wanyande | Projects</title>
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="projects.css" />
+  </head>
+  <body>
+    <!-- 1. NAVIGATION -->
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">Bernard Adala Wanyande</a>
+      <div>
+        <a href="index.html" class="nav-link">← Back to Home</a>
+      </div>
+    </nav>
+
+    <!-- 2. HERO HEADER -->
+    <section class="hero">
+      <h1>Project Archive</h1>
+      <p>
+        A curated collection of my work in Data Science, Full Stack Engineering,
+        and Mobile Development.
+      </p>
+    </section>
+
+    <!-- 3. FILTER SECTION -->
+    <div class="filter-container">
+      <!-- Category Filters -->
+      <div class="filter-group" id="category-filters">
+        <span class="filter-label">Category:</span>
+        <button class="filter-btn active" onclick="setCategory('all', this)">
+          All
+        </button>
+        <button class="filter-btn" onclick="setCategory('data-science', this)">
+          Data Science
+        </button>
+        <button class="filter-btn" onclick="setCategory('web', this)">
+          Web Dev
+        </button>
+        <button class="filter-btn" onclick="setCategory('mobile', this)">
+          Mobile
+        </button>
+        <button class="filter-btn" onclick="setCategory('web3', this)">
+          Web3
+        </button>
+      </div>
+
+      <!-- Year Filters -->
+      <div class="filter-group" id="year-filters">
+        <span class="filter-label">Year:</span>
+        <button class="filter-btn active" onclick="setYear('all', this)">
+          All Time
+        </button>
+        <!-- NEW 2026 BUTTON -->
+        <button class="filter-btn" onclick="setYear('2026', this)">2026</button>
+        <button class="filter-btn" onclick="setYear('2025', this)">2025</button>
+        <button class="filter-btn" onclick="setYear('2024', this)">2024</button>
+        <button class="filter-btn" onclick="setYear('2023', this)">2023</button>
+      </div>
+    </div>
+
+    <!-- 4. PROJECTS CONTAINER -->
+    <div class="projects-container">
+      <!-- GRID -->
+      <div class="projects-grid" id="projects-grid">
+        <!-- PROJECT: PPO Cartpole -->
+        <article
+          class="project-card"
+          data-category="data-science"
+          data-year="2025"
+        >
+          <img
+            src="assets/reinforcement_learning.png"
+            alt="RL Project"
+            class="card-image"
+            loading="lazy"
+          />
+          <div class="card-content">
+            <div class="card-header">
+              <h2 class="card-title">PPO for Cartpole</h2>
+              <span class="card-year">2025</span>
+            </div>
+            <p class="card-desc">
+              Implemented Proximal Policy Optimization (PPO) algorithm on
+              CartPole-v1. Analyzed stability and sample efficiency compared to
+              REINFORCE and Actor-Critic.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">PyTorch</span>
+              <span class="tech-badge">RL</span>
+              <span class="tech-badge">OpenAI Gym</span>
+            </div>
+            <div class="card-links">
+              <a
+                href="https://github.com/adala-wanyande/reinforcement-learning"
+                target="_blank"
+                class="link-btn"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: Recommender System -->
+        <article
+          class="project-card"
+          data-category="data-science"
+          data-year="2025"
+        >
+          <img
+            src="assets/recommender_systems.png"
+            alt="Recommender"
+            class="card-image"
+            loading="lazy"
+          />
+          <div class="card-content">
+            <div class="card-header">
+              <h2 class="card-title">Hybrid Recommender</h2>
+              <span class="card-year">2025</span>
+            </div>
+            <p class="card-desc">
+              Developed a hybrid pair-based implicit recommender system for
+              e-commerce using Random Forests, LightGBM, and SVD. Top-10 recall
+              evaluation.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">LightGBM</span>
+              <span class="tech-badge">SVD</span>
+            </div>
+            <div class="card-links">
+              <a
+                href="https://github.com/adala-wanyande/recommender-systems"
+                target="_blank"
+                class="link-btn"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                Code
+              </a>
+              <a
+                href="https://www.kaggle.com/competitions/recommender-system-challenge-2025-2425-s-2/leaderboard"
+                target="_blank"
+                class="link-btn"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                  />
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: Mosaics -->
+        <article class="project-card" data-category="web3" data-year="2024">
+          <img
+            src="assets/mosaics.png"
+            alt="Mosaics"
+            class="card-image"
+            loading="lazy"
+          />
+          <div class="card-content">
+            <div class="card-header">
+              <h2 class="card-title">Mosaics</h2>
+              <span class="card-year">2024</span>
+            </div>
+            <p class="card-desc">
+              On-chain multiplayer puzzle game powered by AI prompts. Stake
+              assets, earn NFTs, and collaboratively solve puzzles in real-time.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-badge">NextJS</span>
+              <span class="tech-badge">Web3</span>
+              <span class="tech-badge">Supabase</span>
+              <span class="tech-badge">Blockchain</span>
+            </div>
+            <div class="card-links">
+              <a
+                href="https://github.com/Arttribute/mosaics"
+                target="_blank"
+                class="link-btn"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                Code
+              </a>
+              <a
+                href="https://ethglobal.com/showcase/mosaics-87y5x"
+                target="_blank"
+                class="link-btn"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                  />
+                </svg>
+                Demo Video
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: Soko V2 -->
+        <article class="project-card" data-category="mobile" data-year="2024">
+          <img
+            src="assets/soko.png"
+            alt="Soko V2"
+            class="card-image"
+            loading="lazy"
+          />
+          <div class="card-content">
+            <div class="card-header">
+              <h2 class="card-title">Soko V2</h2>
+              <span class="card-year">2024</span>
+            </div>
+            <p class="card-desc">
+              Marketing application for mall campaigns allowing real-time
+              updates on ongoing campaigns and events.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-badge">Flutter</span>
+              <span class="tech-badge">Firebase</span>
+              <span class="tech-badge">Agile</span>
+            </div>
+            <div class="card-links">
+              <a
+                href="https://github.com/adala-wanyande/soko-v2"
+                target="_blank"
+                class="link-btn"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                Code
+              </a>
+              <a
+                href="https://www.figma.com/design/VzwWG3ciXJOYszyUiizL01/Soko-V2"
+                target="_blank"
+                class="link-btn"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                  />
+                </svg>
+                Figma
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: Afya One -->
+        <article class="project-card" data-category="web" data-year="2023">
+          <img
+            src="assets/afya.png"
+            alt="Afya One"
+            class="card-image"
+            loading="lazy"
+          />
+          <div class="card-content">
+            <div class="card-header">
+              <h2 class="card-title">Afya One</h2>
+              <span class="card-year">2023</span>
+            </div>
+            <p class="card-desc">
+              Health and wellness API and dashboard designed to help users track
+              weight, fitness, and nutrition.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Express</span>
+              <span class="tech-badge">MongoDB</span>
+              <span class="tech-badge">Node</span>
+            </div>
+            <div class="card-links">
+              <a
+                href="https://afya-one.vercel.app/home"
+                target="_blank"
+                class="link-btn"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                  />
+                </svg>
+                Live Site
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: NextLevel Foods -->
+        <article class="project-card" data-category="web" data-year="2023">
+          <img
+            src="assets/nextlevel.png"
+            alt="NextLevel Foods"
+            class="card-image"
+            loading="lazy"
+          />
+          <div class="card-content">
+            <div class="card-header">
+              <h2 class="card-title">NextLevel Foods</h2>
+              <span class="card-year">2023</span>
+            </div>
+            <p class="card-desc">
+              Foodies community app for sharing recipes. Features recipe upload,
+              community viewing, and AWS S3 image hosting.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-badge">NextJS</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">AWS S3</span>
+            </div>
+            <div class="card-links">
+              <a
+                href="https://foodies-app-adala.vercel.app/"
+                target="_blank"
+                class="link-btn"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                  />
+                </svg>
+                Live Site
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: E-Soma -->
+        <article class="project-card" data-category="web" data-year="2023">
+          <img
+            src="assets/esoma.png"
+            alt="E-Soma"
+            class="card-image"
+            loading="lazy"
+          />
+          <div class="card-content">
+            <div class="card-header">
+              <h2 class="card-title">E-Soma Kenya</h2>
+              <span class="card-year">2023</span>
+            </div>
+            <p class="card-desc">
+              E-learning platform assisting underprivileged students to access
+              free course material, textbooks, and quizzes online.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-badge">Laravel</span>
+              <span class="tech-badge">PHP</span>
+              <span class="tech-badge">TailwindCSS</span>
+            </div>
+            <div class="card-links">
+              <a
+                href="https://github.com/eddiemg10/esoma"
+                target="_blank"
+                class="link-btn"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: Strathmore Disciplinary -->
+        <article class="project-card" data-category="web" data-year="2023">
+          <img
+            src="assets/strathmore.png"
+            alt="Strathmore System"
+            class="card-image"
+            loading="lazy"
+          />
+          <div class="card-content">
+            <div class="card-header">
+              <h2 class="card-title">School System</h2>
+              <span class="card-year">2023</span>
+            </div>
+            <p class="card-desc">
+              Designed and developed a disciplinary and homework record
+              management system for Strathmore School.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-badge">Laravel</span>
+              <span class="tech-badge">PHP</span>
+              <span class="tech-badge">Figma</span>
+            </div>
+            <div class="card-links">
+              <a
+                href="https://github.com/eddiemg10/Strathmore-Disciplinary-System"
+                target="_blank"
+                class="link-btn"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: Rose's Pizza -->
+        <article class="project-card" data-category="web" data-year="2023">
+          <img
+            src="assets/roses.png"
+            alt="Rose's Pizza"
+            class="card-image"
+            loading="lazy"
+          />
+          <div class="card-content">
+            <div class="card-header">
+              <h2 class="card-title">Rose's Pizza</h2>
+              <span class="card-year">2023</span>
+            </div>
+            <p class="card-desc">
+              Website for a gourmet pizza restaurant allowing users to order
+              pizzas, view the menu, and contact the restaurant.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Netlify</span>
+              <span class="tech-badge">Figma</span>
+            </div>
+            <div class="card-links">
+              <a
+                href="https://rosesgourmetpizza.netlify.app/"
+                target="_blank"
+                class="link-btn"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                  />
+                </svg>
+                Live Site
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- NEW: EMPTY STATE MESSAGE -->
+      <!-- DYNAMIC EMPTY STATE MESSAGE -->
+      <div id="empty-state" class="empty-state">
+        <h3 id="empty-title">🌱 Coming Soon</h3>
+        <p id="empty-text">
+          Relax, the year just started but more to come soon.
+        </p>
+      </div>
+    </div>
+
+    <!-- 5. FOOTER -->
+    <footer>
+      <p>&copy; 2026 Bernard Adala Wanyande. All rights reserved.</p>
+    </footer>
+
+    <!-- 6. JAVASCRIPT LOGIC -->
+    <script>
+      let activeCategory = "all";
+      let activeYear = "all";
+
+      function setCategory(cat, btnElement) {
+        activeCategory = cat;
+
+        // Update Category Buttons Visual
+        const buttons = document.querySelectorAll(
+          "#category-filters .filter-btn",
+        );
+        buttons.forEach((b) => b.classList.remove("active"));
+        btnElement.classList.add("active");
+
+        runFilter();
+      }
+
+      function setYear(year, btnElement) {
+        activeYear = year;
+
+        // Update Year Buttons Visual
+        const buttons = document.querySelectorAll("#year-filters .filter-btn");
+        buttons.forEach((b) => b.classList.remove("active"));
+        btnElement.classList.add("active");
+
+        runFilter();
+      }
+
+      function runFilter() {
+        const cards = document.querySelectorAll(".project-card");
+        const emptyState = document.getElementById("empty-state");
+        const emptyTitle = document.getElementById("empty-title");
+        const emptyText = document.getElementById("empty-text");
+
+        let visibleCount = 0;
+
+        // 1. Loop through cards to show/hide
+        cards.forEach((card) => {
+          const cardCat = card.getAttribute("data-category");
+          const cardYear = card.getAttribute("data-year");
+
+          const catMatch =
+            activeCategory === "all" || activeCategory === cardCat;
+          const yearMatch = activeYear === "all" || activeYear === cardYear;
+
+          if (catMatch && yearMatch) {
+            card.classList.remove("hidden");
+            visibleCount++;
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+
+        // 2. Handle Empty State Logic
+        if (visibleCount === 0) {
+          emptyState.classList.add("visible");
+
+          // Check the context to decide which message to show
+          if (activeYear === "2026") {
+            // SCENARIO 1: The user selected the current/future year
+            emptyTitle.innerText = "🌱 Coming Soon";
+            emptyText.innerText =
+              "Relax, the year just started! I'm currently brewing up some new projects. Check back soon.";
+          } else {
+            // SCENARIO 2: The user selected a past combo that doesn't exist (e.g., Mobile in 2023)
+            emptyTitle.innerText = "🔍 No Projects Found";
+
+            // Create a friendly dynamic message
+            const catName =
+              activeCategory === "all"
+                ? "projects"
+                : activeCategory.replace("-", " ") + " projects";
+            const yearName =
+              activeYear === "all" ? "that timeframe" : activeYear;
+
+            emptyText.innerText = `I didn't publish any ${catName} in ${yearName}. Try selecting a different filter!`;
+          }
+        } else {
+          emptyState.classList.remove("visible");
+        }
+      }
+    </script>
+  </body>
+</html>
