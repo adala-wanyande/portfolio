@@ -467,3 +467,8 @@ nav ul li.active .nav-text {
 p strong {
    color: #4EC5CC; 
 }
+
+.description {
+    padding-top: 200px;
+    margin-bottom: 100px;
+}
