@@ -1,35 +1,38 @@
-# My Portfolio (V2)
+# Portfolio (V3)
 
-Welcome to my portfolio! This website showcases my skills, experience, and projects. This portfolio has been deployed using Netlify and you can access it [here](https://adala-wanyande.github.io/portfolio/).
+Personal portfolio of Bernard Adala Wanyande, Software (AI) Engineer at ING.
+Live at [adala-wanyande.github.io/portfolio](https://adala-wanyande.github.io/portfolio/).
 
-## Credits
-The design of this portfolio was inspired by [Brittany Chiang's portfolio](https://brittanychiang.com/). I would like to express my appreciation for her creative work, which served as inspiration for this project.
+Plain HTML, CSS and JavaScript: no framework, no build step.
 
-## Table of Contents
-- [About](#about)
-- [Experience](#experience)
-- [Projects](#projects)
+## Structure
 
-## About
-In this section, I introduce myself and provide a brief overview of my background, skills, and interests.
+| File              | Purpose                                              |
+| ----------------- | ---------------------------------------------------- |
+| `index.html`      | Home: intro, about, recent experience, selected work |
+| `about.html`      | Story, toolbox, languages, interests                 |
+| `experience.html` | Full work history                                    |
+| `projects.html`   | Filterable project archive                           |
+| `styles.css`      | All styles, with light/dark theme tokens at the top  |
+| `script.js`       | Theme toggle, scroll reveal, project filters         |
+| `assets/`         | Images, favicon and resume                           |
 
-## Experience
-Here, I detail my professional experience, including roles, responsibilities, and key achievements. 
+## Run locally
 
-## Projects
-This section highlights some of the notable projects I have worked on. Each project includes a description, technologies used, and a link to the project repository or live demo.
+```sh
+python3 -m http.server
+```
 
-## How to Use
-1. Clone the repository: `git clone https://github.com/adala-wanyande/portfolio-v2`
-2. Open `index.html` in your preferred web browser.
+Then open http://localhost:8000.
 
-## Technologies Used
-- HTML
-- CSS
-- JavaScript
+## Updating content
 
-## License
-This project is licensed under the [MIT License](LICENSE).
+- **New job:** add an `<li class="job">` at the top of `experience.html`, and
+  on `index.html` if it should appear on the home page.
+- **New project:** add an `<article class="project">` to `projects.html` with
+  `data-category` (`data-science`, `web`, `mobile`, `web3`) and `data-year`.
+  Add a new year chip if needed.
 
 ## Contact
-Feel free to reach out to me via [email](mailto:awanyande@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/adala-wanyande/).
+
+[Email](mailto:awanyande@gmail.com) · [LinkedIn](https://www.linkedin.com/in/adala-wanyande/)
