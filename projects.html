@@ -1,865 +1,478 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bernard Adala Wanyande | Projects</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects · Adala Wanyande</title>
+    <meta
+      name="description"
+      content="Project archive of Bernard Adala Wanyande: data science, full-stack, mobile and Web3."
+    />
+    <meta property="og:title" content="Projects · Adala Wanyande" />
+    <meta
+      property="og:description"
+      content="Project archive of Bernard Adala Wanyande: data science, full-stack, mobile and Web3."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adala-wanyande.github.io/portfolio/projects.html" />
     <link rel="icon" href="assets/favicon.ico" />
-    <link rel="stylesheet" href="projects.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script>
+      (function () {
+        var t;
+        try {
+          t = localStorage.getItem("theme");
+        } catch (e) {}
+        if (!t) {
+          t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.dataset.theme = t;
+        document.documentElement.classList.add("js");
+      })();
+    </script>
   </head>
   <body>
-    <!-- 1. NAVIGATION -->
-    <nav class="navbar">
-      <!-- Left: Back -->
-      <a href="index.html" class="nav-link">← Home</a>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <!-- Middle: Brand -->
-      <a href="index.html" class="nav-brand">Bernard Adala Wanyande</a>
-
-      <!-- Right: Forward -->
-      <a href="experience.html" class="nav-link"> Experience →</a>
-    </nav>
-
-    <!-- 2. HERO HEADER -->
-    <section class="hero">
-      <h1>Project Archive</h1>
-      <p>
-        A curated collection of my work in Data Science, Full Stack Engineering,
-        and Mobile Development.
-      </p>
-    </section>
-
-    <!-- 3. FILTER SECTION -->
-    <div class="filter-container">
-      <!-- Category Filters -->
-      <div class="filter-group" id="category-filters">
-        <span class="filter-label">Category:</span>
-        <button class="filter-btn active" onclick="setCategory('all', this)">
-          All
-        </button>
-        <button class="filter-btn" onclick="setCategory('data-science', this)">
-          Data Science
-        </button>
-        <button class="filter-btn" onclick="setCategory('web', this)">
-          Web Dev
-        </button>
-        <button class="filter-btn" onclick="setCategory('mobile', this)">
-          Mobile
-        </button>
-        <button class="filter-btn" onclick="setCategory('web3', this)">
-          Web3
-        </button>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html" aria-label="Adala Wanyande, home">
+          <span class="brand-mark" aria-hidden="true">AW</span>
+          <span class="brand-name">Adala Wanyande</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+          <a class="nav-resume" href="assets/Bernard_Wanyande_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" /></svg>
+          </button>
+        </nav>
       </div>
+    </header>
 
-      <!-- Year Filters -->
-      <div class="filter-group" id="year-filters">
-        <span class="filter-label">Year:</span>
-        <button class="filter-btn active" onclick="setYear('all', this)">
-          All Time
-        </button>
-        <!-- NEW 2026 BUTTON -->
-        <button class="filter-btn" onclick="setYear('2026', this)">2026</button>
-        <button class="filter-btn" onclick="setYear('2025', this)">2025</button>
-        <button class="filter-btn" onclick="setYear('2024', this)">2024</button>
-        <button class="filter-btn" onclick="setYear('2023', this)">2023</button>
-      </div>
-    </div>
-
-    <!-- 4. PROJECTS CONTAINER -->
-    <div class="projects-container">
-      <!-- GRID -->
-      <div class="projects-grid" id="projects-grid">
-        <!-- PROJECT: DutchMaster AI -->
-        <article class="project-card" data-category="web" data-year="2026">
-          <img
-            src="assets/dutch_master.png"
-            alt="DutchMaster AI"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">DutchMaster AI</h2>
-              <span class="card-year">2026</span>
-            </div>
-            <p class="card-desc">
-              Multi-model web application for Dutch homework analysis. Uses
-              OpenAI, Anthropic, and Google AI in parallel to analyze homework
-              images, explain grammar rules, and decode Dutch idioms.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Next.js</span>
-              <span class="tech-badge">FastAPI</span>
-              <span class="tech-badge">OpenAI</span>
-              <span class="tech-badge">Anthropic</span>
-              <span class="tech-badge">Gemini</span>
-            </div>
-            <div class="card-links">
-              <a
-                href="https://github.com/adala-wanyande/dutch-master-ai"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                  />
-                </svg>
-                Code
-              </a>
-              <a
-                href="https://dutch-master-ai.vercel.app/"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
-                  />
-                </svg>
-                Live Site
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: Unilever RAG System -->
-        <article
-          class="project-card"
-          data-category="data-science"
-          data-year="2025"
-        >
-          <img
-            src="assets/unilever.png"
-            alt="Unilever RAG System"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">Enterprise RAG Knowledge System</h2>
-              <span class="card-year">2025</span>
-            </div>
-            <p class="card-desc">
-              MSc Thesis project. Built a Retrieval-Augmented Generation system
-              for Unilever to query internal documents using hybrid search and
-              LLMs.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">LangChain</span>
-              <span class="tech-badge">FAISS</span>
-              <span class="tech-badge">Streamlit</span>
-            </div>
-            <div class="card-links">
-              <span class="link-btn disabled">Closed Source</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: Unilever Shelf Life Pipeline -->
-        <article
-          class="project-card"
-          data-category="data-science"
-          data-year="2025"
-        >
-          <img
-            src="assets/unilever.png"
-            alt="Unilever Data Pipeline"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">Automated Shelf Life Pipeline</h2>
-              <span class="card-year">2025</span>
-            </div>
-            <p class="card-desc">
-              Data engineering pipeline for Unilever to process and analyze
-              shelf life data, featuring automated ETL and visualization
-              dashboards.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">Pandas</span>
-              <span class="tech-badge">NLTK</span>
-              <span class="tech-badge">Matplotlib</span>
-            </div>
-            <div class="card-links">
-              <span class="link-btn disabled">Closed Source</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: GSALBO Bayesian Optimization -->
-        <article
-          class="project-card"
-          data-category="data-science"
-          data-year="2025"
-        >
-          <img
-            src="assets/bayesian_optimization.png"
-            alt="Bayesian Optimization"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">Constrained Bayesian Optimization</h2>
-              <span class="card-year">2025</span>
-            </div>
-            <p class="card-desc">
-              Implementation of the GSALBO (Grid-Initialized Slack Augmented
-              Lagrangian) method. Benchmarked on the COCO framework.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">BoTorch</span>
-              <span class="tech-badge">C</span>
-              <span class="tech-badge">COCO</span>
-            </div>
-            <div class="card-links">
-              <a
-                href="https://github.com/adala-wanyande/bayesian-optimization"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                  />
-                </svg>
-                Code
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: Fast Top-k Closeness Centrality -->
-        <article
-          class="project-card"
-          data-category="data-science"
-          data-year="2025"
-        >
-          <img
-            src="assets/social_network.png"
-            alt="Social Network Analysis"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">Top-k Centrality Algorithm</h2>
-              <span class="card-year">2025</span>
-            </div>
-            <p class="card-desc">
-              Fast Top-k Closeness Centrality algorithm with sequential
-              experiments for Social Network Analysis course project.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">NetworkX</span>
-              <span class="tech-badge">Pandas</span>
-              <span class="tech-badge">NumPy</span>
-            </div>
-            <div class="card-links">
-              <a
-                href="https://github.com/adala-wanyande/social-network-analysis/tree/main/project/final/sequential"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                  />
-                </svg>
-                Code
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: Python Vulnerability Analysis -->
-        <article
-          class="project-card"
-          data-category="data-science"
-          data-year="2025"
-        >
-          <img
-            src="assets/security_analysis.png"
-            alt="Security Analysis"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">Open-Source Vulnerability Scanner</h2>
-              <span class="card-year">2025</span>
-            </div>
-            <p class="card-desc">
-              Analyzed Python vulnerabilities in open-source repositories for
-              Computer Software Security course. Data mining and visualization.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">Pandas</span>
-              <span class="tech-badge">SQLAlchemy</span>
-              <span class="tech-badge">GitPython</span>
-            </div>
-            <div class="card-links">
-              <a
-                href="https://github.com/adala-wanyande/python-code-vulnerability-analysis"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                  />
-                </svg>
-                Code
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: YouTube Dual Subtitles -->
-        <article class="project-card" data-category="web" data-year="2025">
-          <img
-            src="assets/youtube_subtitles.png"
-            alt="YouTube Dual Subtitles"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">YouTube Dual-Subtitle Tool</h2>
-              <span class="card-year">2025</span>
-            </div>
-            <p class="card-desc">
-              Chrome extension displaying real-time translations above YouTube
-              subtitles. Designed for language learners using Google Gemini API.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">JavaScript</span>
-              <span class="tech-badge">Chrome Extension</span>
-              <span class="tech-badge">Gemini API</span>
-            </div>
-            <div class="card-links">
-              <a
-                href="https://github.com/adala-wanyande/youtube-dual-subtitles"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                  />
-                </svg>
-                Code
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: PPO Cartpole -->
-        <article
-          class="project-card"
-          data-category="data-science"
-          data-year="2025"
-        >
-          <img
-            src="assets/reinforcement_learning.png"
-            alt="RL Project"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">PPO RL Agent</h2>
-              <span class="card-year">2025</span>
-            </div>
-            <p class="card-desc">
-              Implemented Proximal Policy Optimization (PPO) algorithm on
-              CartPole-v1. Analyzed stability and sample efficiency compared to
-              REINFORCE and Actor-Critic.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">PyTorch</span>
-              <span class="tech-badge">RL</span>
-              <span class="tech-badge">OpenAI Gym</span>
-            </div>
-            <div class="card-links">
-              <a
-                href="https://github.com/adala-wanyande/reinforcement-learning"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                  />
-                </svg>
-                Code
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: Recommender System -->
-        <article
-          class="project-card"
-          data-category="data-science"
-          data-year="2025"
-        >
-          <img
-            src="assets/recommender_systems.png"
-            alt="Recommender"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">Hybrid E-Commerce Recommender</h2>
-              <span class="card-year">2025</span>
-            </div>
-            <p class="card-desc">
-              Developed a hybrid pair-based implicit recommender system for
-              e-commerce using Random Forests, LightGBM, and SVD. Top-10 recall
-              evaluation.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">LightGBM</span>
-              <span class="tech-badge">SVD</span>
-            </div>
-            <div class="card-links">
-              <a
-                href="https://github.com/adala-wanyande/recommender-systems"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                  />
-                </svg>
-                Code
-              </a>
-              <a
-                href="https://www.kaggle.com/competitions/recommender-system-challenge-2025-2425-s-2/leaderboard"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
-                  />
-                </svg>
-                Live Demo
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: Mosaics -->
-        <article class="project-card" data-category="web3" data-year="2024">
-          <img
-            src="assets/mosaics.png"
-            alt="Mosaics"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">Mosaics: AI Puzzle Game</h2>
-              <span class="card-year">2024</span>
-            </div>
-            <p class="card-desc">
-              On-chain multiplayer puzzle game powered by AI prompts. Stake
-              assets, earn NFTs, and collaboratively solve puzzles in real-time.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">NextJS</span>
-              <span class="tech-badge">Web3</span>
-              <span class="tech-badge">Supabase</span>
-              <span class="tech-badge">Blockchain</span>
-            </div>
-            <div class="card-links">
-              <a
-                href="https://github.com/Arttribute/mosaics"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                  />
-                </svg>
-                Code
-              </a>
-              <a
-                href="https://ethglobal.com/showcase/mosaics-87y5x"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
-                  />
-                </svg>
-                Demo Video
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: Soko V2 -->
-        <article class="project-card" data-category="mobile" data-year="2024">
-          <img
-            src="assets/soko.png"
-            alt="Soko V2"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">Soko V2: Mall Marketing App</h2>
-              <span class="card-year">2024</span>
-            </div>
-            <p class="card-desc">
-              Marketing application for mall campaigns allowing real-time
-              updates on ongoing campaigns and events.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Flutter</span>
-              <span class="tech-badge">Firebase</span>
-              <span class="tech-badge">Agile</span>
-            </div>
-            <div class="card-links">
-              <a
-                href="https://github.com/adala-wanyande/soko-v2"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                  />
-                </svg>
-                Code
-              </a>
-              <a
-                href="https://www.figma.com/design/VzwWG3ciXJOYszyUiizL01/Soko-V2"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
-                  />
-                </svg>
-                Figma
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: Afya One -->
-        <article class="project-card" data-category="web" data-year="2023">
-          <img
-            src="assets/afya.png"
-            alt="Afya One"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">Afya One: Wellness Tracker</h2>
-              <span class="card-year">2023</span>
-            </div>
-            <p class="card-desc">
-              Health and wellness API and dashboard designed to help users track
-              weight, fitness, and nutrition.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">React</span>
-              <span class="tech-badge">Express</span>
-              <span class="tech-badge">MongoDB</span>
-              <span class="tech-badge">Node</span>
-            </div>
-            <div class="card-links">
-              <a
-                href="https://afya-one.vercel.app/home"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
-                  />
-                </svg>
-                Live Site
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: NextLevel Foods -->
-        <article class="project-card" data-category="web" data-year="2023">
-          <img
-            src="assets/nextlevel.png"
-            alt="NextLevel Foods"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">NextLevel: Social Recipe App</h2>
-              <span class="card-year">2023</span>
-            </div>
-            <p class="card-desc">
-              Foodies community app for sharing recipes. Features recipe upload,
-              community viewing, and AWS S3 image hosting.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">NextJS</span>
-              <span class="tech-badge">TypeScript</span>
-              <span class="tech-badge">AWS S3</span>
-            </div>
-            <div class="card-links">
-              <a
-                href="https://foodies-app-adala.vercel.app/"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
-                  />
-                </svg>
-                Live Site
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: E-Soma -->
-        <article class="project-card" data-category="web" data-year="2023">
-          <img
-            src="assets/esoma.png"
-            alt="E-Soma"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">E-Soma: E-Learning Platform</h2>
-              <span class="card-year">2023</span>
-            </div>
-            <p class="card-desc">
-              E-learning platform assisting underprivileged students to access
-              free course material, textbooks, and quizzes online.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Laravel</span>
-              <span class="tech-badge">PHP</span>
-              <span class="tech-badge">TailwindCSS</span>
-            </div>
-            <div class="card-links">
-              <a
-                href="https://github.com/eddiemg10/esoma"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                  />
-                </svg>
-                Code
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: Strathmore Disciplinary -->
-        <article class="project-card" data-category="web" data-year="2023">
-          <img
-            src="assets/strathmore.png"
-            alt="Strathmore System"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">Academic Record System</h2>
-              <span class="card-year">2023</span>
-            </div>
-            <p class="card-desc">
-              Designed and developed a disciplinary and homework record
-              management system for Strathmore School.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Laravel</span>
-              <span class="tech-badge">PHP</span>
-              <span class="tech-badge">Figma</span>
-            </div>
-            <div class="card-links">
-              <a
-                href="https://github.com/eddiemg10/Strathmore-Disciplinary-System"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.04-.015-2.04-3.34.72-4.04-1.605-4.04-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.09-.75.075-.735.075-.735 1.2.09 1.83 1.245 1.83 1.245 1.065 1.845 2.805 1.32 3.495 1.005.105-.78.42-1.305.765-1.605-2.67-.3-5.475-1.335-5.475-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                  />
-                </svg>
-                Code
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: Rose's Pizza -->
-        <article class="project-card" data-category="web" data-year="2023">
-          <img
-            src="assets/roses.png"
-            alt="Rose's Pizza"
-            class="card-image"
-            loading="lazy"
-          />
-          <div class="card-content">
-            <div class="card-header">
-              <h2 class="card-title">Rose's Gourmet: E-Commerce</h2>
-              <span class="card-year">2023</span>
-            </div>
-            <p class="card-desc">
-              Website for a gourmet pizza restaurant allowing users to order
-              pizzas, view the menu, and contact the restaurant.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">React</span>
-              <span class="tech-badge">Netlify</span>
-              <span class="tech-badge">Figma</span>
-            </div>
-            <div class="card-links">
-              <a
-                href="https://rosesgourmetpizza.netlify.app/"
-                target="_blank"
-                class="link-btn"
-              >
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
-                  />
-                </svg>
-                Live Site
-              </a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- NEW: EMPTY STATE MESSAGE -->
-      <!-- DYNAMIC EMPTY STATE MESSAGE -->
-      <div id="empty-state" class="empty-state">
-        <h3 id="empty-title">🌱 Coming Soon</h3>
-        <p id="empty-text">
-          Relax, the year just started but more to come soon.
+    <main id="main" class="wrap">
+      <header class="page-head">
+        <span class="eyebrow">Projects</span>
+        <h1>Project archive</h1>
+        <p>
+          Things I've built across data science, full-stack engineering and
+          mobile, from course projects to hackathons and client work.
         </p>
-      </div>
-    </div>
+      </header>
 
-    <!-- 5. FOOTER -->
-    <footer>
-      <p>&copy; 2026 Bernard Adala Wanyande. All rights reserved.</p>
+      <div class="filters">
+        <div class="filter-group" role="group" aria-label="Filter by category" data-filter="category">
+          <span class="eyebrow">Category</span>
+          <button class="chip" type="button" data-value="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-value="data-science" aria-pressed="false">Data science</button>
+          <button class="chip" type="button" data-value="web" aria-pressed="false">Web</button>
+          <button class="chip" type="button" data-value="mobile" aria-pressed="false">Mobile</button>
+          <button class="chip" type="button" data-value="web3" aria-pressed="false">Web3</button>
+        </div>
+        <div class="filter-group" role="group" aria-label="Filter by year" data-filter="year">
+          <span class="eyebrow">Year</span>
+          <button class="chip" type="button" data-value="all" aria-pressed="true">All time</button>
+          <button class="chip" type="button" data-value="2026" aria-pressed="false">2026</button>
+          <button class="chip" type="button" data-value="2025" aria-pressed="false">2025</button>
+          <button class="chip" type="button" data-value="2024" aria-pressed="false">2024</button>
+          <button class="chip" type="button" data-value="2023" aria-pressed="false">2023</button>
+        </div>
+      </div>
+
+      <p class="result-count" data-result-count aria-live="polite">16 projects</p>
+
+      <div class="projects-grid" data-project-grid>
+        <article class="project" data-category="web" data-year="2026">
+          <div class="project-media">
+            <img src="assets/dutch_master.png" alt="DutchMaster AI interface" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>DutchMaster AI</h3>
+              <span class="project-year">2026</span>
+            </div>
+            <p class="project-desc">Multi-model web app for Dutch homework. Runs OpenAI, Anthropic and Gemini in parallel to analyse homework images, explain grammar rules and decode Dutch idioms.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Next.js</li>
+              <li>FastAPI</li>
+              <li>OpenAI</li>
+              <li>Anthropic</li>
+              <li>Gemini</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-arrow" href="https://dutch-master-ai.vercel.app/" target="_blank" rel="noopener noreferrer">Live site <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+              <a class="link-arrow" href="https://github.com/adala-wanyande/dutch-master-ai" target="_blank" rel="noopener noreferrer">Code <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="data-science" data-year="2025">
+          <div class="project-media">
+            <img src="assets/unilever.png" alt="Enterprise RAG knowledge system" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>Enterprise RAG Knowledge System</h3>
+              <span class="project-year">2025</span>
+            </div>
+            <p class="project-desc">MSc thesis project with Unilever. A retrieval-augmented generation system for querying internal documents with hybrid search and LLMs.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li>
+              <li>LangChain</li>
+              <li>FAISS</li>
+              <li>Streamlit</li>
+            </ul>
+            <div class="project-links">
+              <span class="closed">Closed source</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="data-science" data-year="2025">
+          <div class="project-media">
+            <img src="assets/unilever.png" alt="Shelf-life data pipeline" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>Automated Shelf-Life Pipeline</h3>
+              <span class="project-year">2025</span>
+            </div>
+            <p class="project-desc">Data pipeline for Unilever that processes and analyses shelf-life data, with automated ETL and visualisation dashboards.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li>
+              <li>Pandas</li>
+              <li>NLTK</li>
+              <li>Matplotlib</li>
+            </ul>
+            <div class="project-links">
+              <span class="closed">Closed source</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="data-science" data-year="2025">
+          <div class="project-media">
+            <img src="assets/bayesian_optimization.png" alt="Bayesian optimisation results plot" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>Constrained Bayesian Optimization</h3>
+              <span class="project-year">2025</span>
+            </div>
+            <p class="project-desc">Implementation of GSALBO (Grid-Initialized Slack Augmented Lagrangian Bayesian Optimization), benchmarked on the COCO framework.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li>
+              <li>BoTorch</li>
+              <li>C</li>
+              <li>COCO</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-arrow" href="https://github.com/adala-wanyande/bayesian-optimization" target="_blank" rel="noopener noreferrer">Code <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="data-science" data-year="2025">
+          <div class="project-media">
+            <img src="assets/social_network.png" alt="Social network graph" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>Top-k Closeness Centrality</h3>
+              <span class="project-year">2025</span>
+            </div>
+            <p class="project-desc">Fast top-k closeness centrality algorithm with sequential experiments, built for a Social Network Analysis course.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li>
+              <li>NetworkX</li>
+              <li>Pandas</li>
+              <li>NumPy</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-arrow" href="https://github.com/adala-wanyande/social-network-analysis/tree/main/project/final/sequential" target="_blank" rel="noopener noreferrer">Code <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="data-science" data-year="2025">
+          <div class="project-media">
+            <img src="assets/security_analysis.png" alt="Vulnerability analysis charts" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>Open-Source Vulnerability Analysis</h3>
+              <span class="project-year">2025</span>
+            </div>
+            <p class="project-desc">Mined and visualised Python vulnerabilities across open-source repositories for a Computer Software Security course.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li>
+              <li>Pandas</li>
+              <li>SQLAlchemy</li>
+              <li>GitPython</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-arrow" href="https://github.com/adala-wanyande/python-code-vulnerability-analysis" target="_blank" rel="noopener noreferrer">Code <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="web" data-year="2025">
+          <div class="project-media">
+            <img src="assets/youtube_subtitles.png" alt="YouTube dual-subtitle Chrome extension" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>YouTube Dual Subtitles</h3>
+              <span class="project-year">2025</span>
+            </div>
+            <p class="project-desc">Chrome extension that shows real-time translations above YouTube subtitles, designed for language learners and powered by the Gemini API.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>JavaScript</li>
+              <li>Chrome Extension</li>
+              <li>Gemini</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-arrow" href="https://github.com/adala-wanyande/youtube-dual-subtitles" target="_blank" rel="noopener noreferrer">Code <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="data-science" data-year="2025">
+          <div class="project-media">
+            <img src="assets/reinforcement_learning.png" alt="Reinforcement learning training curves" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>PPO Reinforcement Learning Agent</h3>
+              <span class="project-year">2025</span>
+            </div>
+            <p class="project-desc">Proximal Policy Optimization on CartPole-v1, comparing stability and sample efficiency against REINFORCE and Actor-Critic.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li>
+              <li>PyTorch</li>
+              <li>Gym</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-arrow" href="https://github.com/adala-wanyande/reinforcement-learning" target="_blank" rel="noopener noreferrer">Code <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="data-science" data-year="2025">
+          <div class="project-media">
+            <img src="assets/recommender_systems.png" alt="Recommender system visualisation" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>Hybrid E-Commerce Recommender</h3>
+              <span class="project-year">2025</span>
+            </div>
+            <p class="project-desc">Pair-based implicit recommender framed as classification over engineered user–item features with Random Forest, LightGBM and SVD. Evaluated on Recall@10.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li>
+              <li>LightGBM</li>
+              <li>Random Forest</li>
+              <li>SVD</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-arrow" href="https://github.com/adala-wanyande/recommender-systems" target="_blank" rel="noopener noreferrer">Code <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+              <a class="link-arrow" href="https://www.kaggle.com/competitions/recommender-system-challenge-2025-2425-s-2/leaderboard" target="_blank" rel="noopener noreferrer">Kaggle <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="web3" data-year="2024">
+          <div class="project-media">
+            <img src="assets/mosaics.png" alt="Mosaics puzzle game" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>Mosaics: AI Puzzle Game</h3>
+              <span class="project-year">2024</span>
+            </div>
+            <p class="project-desc">On-chain multiplayer puzzle game powered by AI prompts. Stake assets, earn NFTs and solve puzzles together in real time. Built at ETHGlobal.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Next.js</li>
+              <li>Web3</li>
+              <li>Supabase</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-arrow" href="https://github.com/Arttribute/mosaics" target="_blank" rel="noopener noreferrer">Code <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+              <a class="link-arrow" href="https://ethglobal.com/showcase/mosaics-87y5x" target="_blank" rel="noopener noreferrer">Demo <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="mobile" data-year="2024">
+          <div class="project-media">
+            <img src="assets/soko.png" alt="Soko V2 mobile app screens" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>Soko V2: Mall Marketing App</h3>
+              <span class="project-year">2024</span>
+            </div>
+            <p class="project-desc">Marketing app for mall campaigns with real-time updates on ongoing campaigns and events.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Flutter</li>
+              <li>Firebase</li>
+              <li>Agile</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-arrow" href="https://github.com/adala-wanyande/soko-v2" target="_blank" rel="noopener noreferrer">Code <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+              <a class="link-arrow" href="https://www.figma.com/design/VzwWG3ciXJOYszyUiizL01/Soko-V2" target="_blank" rel="noopener noreferrer">Figma <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="web" data-year="2023">
+          <div class="project-media">
+            <img src="assets/afya.png" alt="Afya One dashboard" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>Afya One: Wellness Tracker</h3>
+              <span class="project-year">2023</span>
+            </div>
+            <p class="project-desc">Health and wellness API and dashboard for tracking weight, fitness and nutrition.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>React</li>
+              <li>Express</li>
+              <li>MongoDB</li>
+              <li>Node.js</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-arrow" href="https://afya-one.vercel.app/home" target="_blank" rel="noopener noreferrer">Live site <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="web" data-year="2023">
+          <div class="project-media">
+            <img src="assets/nextlevel.png" alt="NextLevel recipe app" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>NextLevel: Social Recipe App</h3>
+              <span class="project-year">2023</span>
+            </div>
+            <p class="project-desc">Community app for foodies to share recipes, with recipe uploads and image hosting on AWS S3.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Next.js</li>
+              <li>TypeScript</li>
+              <li>AWS S3</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-arrow" href="https://foodies-app-adala.vercel.app/" target="_blank" rel="noopener noreferrer">Live site <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="web" data-year="2023">
+          <div class="project-media">
+            <img src="assets/esoma.png" alt="E-Soma learning platform" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>E-Soma: E-Learning Platform</h3>
+              <span class="project-year">2023</span>
+            </div>
+            <p class="project-desc">E-learning platform giving underprivileged students free access to course material, textbooks and quizzes.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Laravel</li>
+              <li>PHP</li>
+              <li>Tailwind CSS</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-arrow" href="https://github.com/eddiemg10/esoma" target="_blank" rel="noopener noreferrer">Code <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="web" data-year="2023">
+          <div class="project-media">
+            <img src="assets/strathmore.png" alt="Strathmore academic record system" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>Academic Record System</h3>
+              <span class="project-year">2023</span>
+            </div>
+            <p class="project-desc">Disciplinary and homework record management system designed and built for Strathmore School.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Laravel</li>
+              <li>PHP</li>
+              <li>Figma</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-arrow" href="https://github.com/eddiemg10/Strathmore-Disciplinary-System" target="_blank" rel="noopener noreferrer">Code <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="web" data-year="2023">
+          <div class="project-media">
+            <img src="assets/roses.png" alt="Rose&#x27;s Gourmet Pizza website" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>Rose&#x27;s Gourmet Pizza</h3>
+              <span class="project-year">2023</span>
+            </div>
+            <p class="project-desc">Website for a gourmet pizza restaurant: browse the menu, order pizzas and contact the restaurant.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>React</li>
+              <li>Netlify</li>
+              <li>Figma</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-arrow" href="https://rosesgourmetpizza.netlify.app/" target="_blank" rel="noopener noreferrer">Live site <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="empty" data-empty hidden>
+        <h2>Nothing here yet</h2>
+        <p>Try a different filter.</p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="contact">
+          <span class="eyebrow">Contact</span>
+          <h2>Let's talk.</h2>
+          <p>
+            AI engineering, document extraction, or a LeetCode session: my inbox
+            is open at <strong>awanyande@gmail.com</strong>.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:awanyande@gmail.com">Send an email</a>
+            <a class="btn" href="https://linkedin.com/in/adala-wanyande" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span data-year-now>2026</span> Bernard Adala Wanyande</p>
+          <ul>
+            <li><a href="https://github.com/adala-wanyande" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/adala-wanyande" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://leetcode.com/u/adala-wanyande/" target="_blank" rel="noopener noreferrer">LeetCode</a></li>
+            <li><a href="assets/Bernard_Wanyande_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
 
-    <!-- 6. JAVASCRIPT LOGIC -->
-    <script>
-      let activeCategory = "all";
-      let activeYear = "all";
-
-      function setCategory(cat, btnElement) {
-        activeCategory = cat;
-
-        // Update Category Buttons Visual
-        const buttons = document.querySelectorAll(
-          "#category-filters .filter-btn",
-        );
-        buttons.forEach((b) => b.classList.remove("active"));
-        btnElement.classList.add("active");
-
-        runFilter();
-      }
-
-      function setYear(year, btnElement) {
-        activeYear = year;
-
-        // Update Year Buttons Visual
-        const buttons = document.querySelectorAll("#year-filters .filter-btn");
-        buttons.forEach((b) => b.classList.remove("active"));
-        btnElement.classList.add("active");
-
-        runFilter();
-      }
-
-      function runFilter() {
-        const cards = document.querySelectorAll(".project-card");
-        const emptyState = document.getElementById("empty-state");
-        const emptyTitle = document.getElementById("empty-title");
-        const emptyText = document.getElementById("empty-text");
-
-        let visibleCount = 0;
-
-        // 1. Loop through cards to show/hide
-        cards.forEach((card) => {
-          const cardCat = card.getAttribute("data-category");
-          const cardYear = card.getAttribute("data-year");
-
-          const catMatch =
-            activeCategory === "all" || activeCategory === cardCat;
-          const yearMatch = activeYear === "all" || activeYear === cardYear;
-
-          if (catMatch && yearMatch) {
-            card.classList.remove("hidden");
-            visibleCount++;
-          } else {
-            card.classList.add("hidden");
-          }
-        });
-
-        // 2. Handle Empty State Logic
-        if (visibleCount === 0) {
-          emptyState.classList.add("visible");
-
-          // Check the context to decide which message to show
-          if (activeYear === "2026") {
-            // SCENARIO 1: The user selected the current/future year
-            emptyTitle.innerText = "🌱 Coming Soon";
-            emptyText.innerText =
-              "Relax, the year just started! I'm currently brewing up some new projects. Check back soon.";
-          } else {
-            // SCENARIO 2: The user selected a past combo that doesn't exist (e.g., Mobile in 2023)
-            emptyTitle.innerText = "🔍 No Projects Found";
-
-            // Create a friendly dynamic message
-            const catName =
-              activeCategory === "all"
-                ? "projects"
-                : activeCategory.replace("-", " ") + " projects";
-            const yearName =
-              activeYear === "all" ? "that timeframe" : activeYear;
-
-            emptyText.innerText = `I didn't publish any ${catName} in ${yearName}. Try selecting a different filter!`;
-          }
-        } else {
-          emptyState.classList.remove("visible");
-        }
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

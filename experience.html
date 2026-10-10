@@ -1,242 +1,294 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bernard Adala Wanyande | Experience</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Experience · Adala Wanyande</title>
+    <meta
+      name="description"
+      content="Work experience of Bernard Adala Wanyande: ING, Unilever, TU Delft Q-Team and more."
+    />
+    <meta property="og:title" content="Experience · Adala Wanyande" />
+    <meta
+      property="og:description"
+      content="Work experience of Bernard Adala Wanyande: ING, Unilever, TU Delft Q-Team and more."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adala-wanyande.github.io/portfolio/experience.html" />
     <link rel="icon" href="assets/favicon.ico" />
-    <link rel="stylesheet" href="experience.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script>
+      (function () {
+        var t;
+        try {
+          t = localStorage.getItem("theme");
+        } catch (e) {}
+        if (!t) {
+          t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.dataset.theme = t;
+        document.documentElement.classList.add("js");
+      })();
+    </script>
   </head>
   <body>
-    <!-- 1. NAVIGATION -->
-    <nav class="navbar">
-      <!-- Left: Back -->
-      <a href="index.html" class="nav-link">← Home</a>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <!-- Middle: Brand -->
-      <a href="index.html" class="nav-brand">Bernard Adala Wanyande</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html" aria-label="Adala Wanyande, home">
+          <span class="brand-mark" aria-hidden="true">AW</span>
+          <span class="brand-name">Adala Wanyande</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="about.html">About</a>
+          <a href="experience.html" aria-current="page">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a class="nav-resume" href="assets/Bernard_Wanyande_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" /></svg>
+          </button>
+        </nav>
+      </div>
+    </header>
 
-      <!-- Right: Forward -->
-      <a href="projects.html" class="nav-link">Projects →</a>
-    </nav>
+    <main id="main" class="wrap">
+      <header class="page-head">
+        <span class="eyebrow">Experience</span>
+        <h1>Where I've worked</h1>
+        <p>
+          From internships in Nairobi to AI engineering in the Netherlands:
+          web, mobile, data science, and now production AI.
+        </p>
+      </header>
 
-    <!-- 2. HERO HEADER -->
-    <section class="hero">
-      <h1>Professional Experience</h1>
-      <p>My journey in Software Engineering, Data Science, and Teaching.</p>
-    </section>
+      <ol class="jobs">
+        <li class="job reveal">
+          <div class="job-date">
+            Sep 2026 – Present<br />
+            <span class="current">Current</span>
+          </div>
+          <div>
+            <h3>
+              <a href="https://www.ing.com/" target="_blank" rel="noopener noreferrer">
+                Software (AI) Engineer <span class="company">· ING</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg>
+              </a>
+            </h3>
+            <p class="team">Wholesale Banking · Netherlands</p>
+            <p class="job-desc">
+              Building AI-powered document extraction use cases for Wholesale
+              Banking, turning unstructured documents into structured,
+              validated data.
+            </p>
+            <p class="job-desc">
+              I develop backend services and APIs with Spring Boot and FastAPI,
+              build agents on Google's Agent Platform, and deploy to Google Cloud
+              Run through automated DevOps pipelines.
+            </p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>Python</li>
+              <li>FastAPI</li>
+              <li>Google Agent Platform</li>
+              <li>Google Cloud Run</li>
+              <li>REST APIs</li>
+              <li>CI/CD</li>
+            </ul>
+          </div>
+        </li>
 
-    <!-- 3. TIMELINE -->
-    <div class="timeline-container">
-      <!-- ITEM 1: Q-Team -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Nov 2025 - Present</div>
-        <div class="timeline-content">
-          <h2 class="role-title">Teaching Assistant: Quantum Computing</h2>
-          <a
-            href="https://www.tudelft.nl/en/eemcs/the-faculty/departments/quantum-computer-engineering"
-            target="_blank"
-            class="company-name"
-          >
-            Q-Team (THUAS, TU Delft, Leiden)
-            <svg class="company-svg" viewBox="0 0 20 20">
-              <path
-                fill-rule="evenodd"
-                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </a>
-          <p class="role-desc">
-            Teaching fundamental quantum computing concepts to students through
-            lectures and practical lab sessions. Contributing to curriculum
-            development and organizing educational workshops across the
-            collaborative university network.
+        <li class="job reveal">
+          <div class="job-date">Nov 2025 – Sep 2026</div>
+          <div>
+            <h3>
+              <a href="https://www.tudelft.nl/en/eemcs/the-faculty/departments/quantum-computer-engineering" target="_blank" rel="noopener noreferrer">
+                Teaching Assistant, Quantum Computing <span class="company">· Q-Team</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg>
+              </a>
+            </h3>
+            <p class="team">THUAS, TU Delft &amp; Leiden University</p>
+            <p class="job-desc">
+              Taught quantum computing fundamentals through lectures and
+              practical lab sessions. Contributed to curriculum development and
+              course materials, and organised workshops and events promoting
+              quantum computing education across the university network.
+            </p>
+            <ul class="tags" aria-label="Skills">
+              <li>Quantum Computing</li>
+              <li>Teaching</li>
+              <li>Curriculum Design</li>
+              <li>Event Planning</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="job reveal">
+          <div class="job-date">Feb 2025 – Sep 2025</div>
+          <div>
+            <h3>
+              <a href="https://www.unilever.nl/" target="_blank" rel="noopener noreferrer">
+                Data Scientist, Generative AI <span class="company">· Unilever</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg>
+              </a>
+            </h3>
+            <p class="job-desc">
+              Automated shelf-life prediction with statistical modelling and
+              machine learning, reducing manual analysis time by 60% and
+              improving forecast accuracy by 30%.
+            </p>
+            <p class="job-desc">
+              Built an AI learning assistant that summarises SharePoint content
+              into structured learning paths, cutting onboarding time by 40%.
+              Worked on a RAG chatbot over proprietary company data using
+              state-of-the-art retrieval models and open LLMs.
+            </p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li>
+              <li>LangChain</li>
+              <li>OpenAI</li>
+              <li>Next.js</li>
+              <li>FastAPI</li>
+              <li>Azure DevOps</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="job reveal">
+          <div class="job-date">Aug 2024 – Jan 2025</div>
+          <div>
+            <h3>
+              <a href="https://www.riskafrica.co.ke/" target="_blank" rel="noopener noreferrer">
+                Junior Full-Stack Developer <span class="company">· Risk Africa Innovatis</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg>
+              </a>
+            </h3>
+            <p class="job-desc">
+              Built Next.js frontend components and FastAPI microservices for
+              the NGCDF fund-management project. Integrated OpenAI's LLMs for
+              translations, reducing development time by 75%, and led the
+              migration to a microservices architecture.
+            </p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li>
+              <li>TypeScript</li>
+              <li>Next.js</li>
+              <li>FastAPI</li>
+              <li>Pandas</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="job reveal">
+          <div class="job-date">Mar 2024 – Jul 2024</div>
+          <div>
+            <h3>
+              <a href="https://www.kodally.com/" target="_blank" rel="noopener noreferrer">
+                Mobile App Developer Intern <span class="company">· Kodally</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg>
+              </a>
+            </h3>
+            <p class="job-desc">
+              Led a team building a Flutter marketing app for mall campaigns:
+              gathered requirements, worked with stakeholders, and shipped
+              the solution using Agile practices.
+            </p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Flutter</li>
+              <li>Firebase</li>
+              <li>Agile</li>
+              <li>Jira</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="job reveal">
+          <div class="job-date">May 2023 – Jul 2023</div>
+          <div>
+            <h3>
+              <a href="https://www.ilabafrica.ac.ke/" target="_blank" rel="noopener noreferrer">
+                Frontend Developer Intern <span class="company">· @iLabAfrica</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg>
+              </a>
+            </h3>
+            <p class="job-desc">
+              Delivered production code for clients including the Kenyan
+              Ministry of Health, specialising in Vue.js and Laravel
+              integrations.
+            </p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Vue.js</li>
+              <li>Laravel</li>
+              <li>PHP</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="job reveal">
+          <div class="job-date">Jan 2023 – Mar 2023</div>
+          <div>
+            <h3>
+              <a href="https://www.willfreight.ke/" target="_blank" rel="noopener noreferrer">
+                Web Developer Intern <span class="company">· Willfreight Express Cargo</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg>
+              </a>
+            </h3>
+            <p class="job-desc">
+              Built and maintained company websites and internal tools
+              alongside designers, shipping production code.
+            </p>
+            <ul class="tags" aria-label="Technologies">
+              <li>React</li>
+              <li>PHP</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+
+      <div class="section-footer">
+        <a class="link-arrow" href="assets/Bernard_Wanyande_Resume.pdf" target="_blank" rel="noopener noreferrer">
+          Download resume (PDF)
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg>
+        </a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="contact">
+          <span class="eyebrow">Contact</span>
+          <h2>Let's talk.</h2>
+          <p>
+            AI engineering, document extraction, or a LeetCode session: my inbox
+            is open at <strong>awanyande@gmail.com</strong>.
           </p>
-          <div class="tech-stack">
-            <span class="tech-badge">Quantum Computing</span>
-            <span class="tech-badge">Education</span>
-            <span class="tech-badge">Project Planning</span>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:awanyande@gmail.com">Send an email</a>
+            <a class="btn" href="https://linkedin.com/in/adala-wanyande" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
           </div>
         </div>
-      </div>
-
-      <!-- ITEM 2: Unilever -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Feb 2025 - Sep 2025</div>
-        <div class="timeline-content">
-          <h2 class="role-title">Data Scientist: Generative AI</h2>
-          <a
-            href="https://www.unilever.nl/"
-            target="_blank"
-            class="company-name"
-          >
-            Unilever
-            <svg class="company-svg" viewBox="0 0 20 20">
-              <path
-                fill-rule="evenodd"
-                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </a>
-          <p class="role-desc">
-            Automated shelf life prediction using statistical modeling, reducing
-            analysis time by 60%. Developed an AI-powered learning assistant
-            summarizer and a RAG chatbot on proprietary company data using
-            State-of-the-Art retrieval models.
-          </p>
-          <div class="tech-stack">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">LangChain</span>
-            <span class="tech-badge">OpenAI</span>
-            <span class="tech-badge">Azure DevOps</span>
-            <span class="tech-badge">FastAPI</span>
-          </div>
+        <div class="footer-bottom">
+          <p>&copy; <span data-year-now>2026</span> Bernard Adala Wanyande</p>
+          <ul>
+            <li><a href="https://github.com/adala-wanyande" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/adala-wanyande" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://leetcode.com/u/adala-wanyande/" target="_blank" rel="noopener noreferrer">LeetCode</a></li>
+            <li><a href="assets/Bernard_Wanyande_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+          </ul>
         </div>
       </div>
-
-      <!-- ITEM 3: Risk Africa -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Aug 2024 - Jan 2025</div>
-        <div class="timeline-content">
-          <h2 class="role-title">Junior Fullstack Developer</h2>
-          <a
-            href="https://www.riskafrica.co.ke/"
-            target="_blank"
-            class="company-name"
-          >
-            Risk Africa Innovatis
-            <svg class="company-svg" viewBox="0 0 20 20">
-              <path
-                fill-rule="evenodd"
-                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </a>
-          <p class="role-desc">
-            Developed Next.js frontend components and FastAPI microservices for
-            the NGCDF project. Integrated OpenAI’s LLM for translations
-            (reducing dev time by 75%) and led migration to microservices
-            architecture.
-          </p>
-          <div class="tech-stack">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">TypeScript</span>
-            <span class="tech-badge">NextJS</span>
-            <span class="tech-badge">FastAPI</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- ITEM 4: Kodally -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Mar 2024 - Jul 2024</div>
-        <div class="timeline-content">
-          <h2 class="role-title">Mobile App Developer Intern</h2>
-          <a
-            href="https://www.kodally.com/"
-            target="_blank"
-            class="company-name"
-          >
-            Kodally
-            <svg class="company-svg" viewBox="0 0 20 20">
-              <path
-                fill-rule="evenodd"
-                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </a>
-          <p class="role-desc">
-            Led a team to develop a marketing application for mall campaigns
-            using Agile methodologies and Flutter. Collected user requirements,
-            collaborated with stakeholders, and deployed the solution.
-          </p>
-          <div class="tech-stack">
-            <span class="tech-badge">Flutter</span>
-            <span class="tech-badge">Firebase</span>
-            <span class="tech-badge">Agile</span>
-            <span class="tech-badge">Jira</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- ITEM 5: iLabAfrica -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">May 2023 - Jul 2023</div>
-        <div class="timeline-content">
-          <h2 class="role-title">Frontend Developer Intern</h2>
-          <a
-            href="https://www.ilabafrica.ac.ke/"
-            target="_blank"
-            class="company-name"
-          >
-            @iLabAfrica
-            <svg class="company-svg" viewBox="0 0 20 20">
-              <path
-                fill-rule="evenodd"
-                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </a>
-          <p class="role-desc">
-            Delivered high-quality production code for diverse projects for
-            clients including the Kenyan Ministry of Health. Specialised in
-            Vue.js and Laravel integrations.
-          </p>
-          <div class="tech-stack">
-            <span class="tech-badge">Laravel</span>
-            <span class="tech-badge">Vue.js</span>
-            <span class="tech-badge">PHP</span>
-            <span class="tech-badge">PostgreSQL</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- ITEM 6: Willfreight -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Jan 2023 - Mar 2023</div>
-        <div class="timeline-content">
-          <h2 class="role-title">Web Developer Intern</h2>
-          <a
-            href="https://www.willfreight.ke/"
-            target="_blank"
-            class="company-name"
-          >
-            Willfreight Express Cargo
-            <svg class="company-svg" viewBox="0 0 20 20">
-              <path
-                fill-rule="evenodd"
-                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </a>
-          <p class="role-desc">
-            Developed, maintained, and shipped production code. Collaborated
-            with designers to create new company websites and internal tools.
-          </p>
-          <div class="tech-stack">
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">PHP</span>
-            <span class="tech-badge">MySQL</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 4. FOOTER -->
-    <footer>
-      <p>&copy; 2026 Bernard Adala Wanyande. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

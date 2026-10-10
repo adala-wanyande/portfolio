@@ -1,594 +1,378 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
-    <title>Adala Wanyande Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adala Wanyande · Software (AI) Engineer</title>
+    <meta
+      name="description"
+      content="Bernard Adala Wanyande, Software (AI) Engineer at ING Wholesale Banking, building AI-powered document extraction with Spring Boot, FastAPI and Google Cloud."
+    />
+    <meta property="og:title" content="Adala Wanyande · Software (AI) Engineer" />
+    <meta
+      property="og:description"
+      content="Software (AI) Engineer at ING Wholesale Banking, building AI-powered document extraction."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adala-wanyande.github.io/portfolio/" />
     <link rel="icon" href="assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link href="styles.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        var t;
+        try {
+          t = localStorage.getItem("theme");
+        } catch (e) {}
+        if (!t) {
+          t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.dataset.theme = t;
+        document.documentElement.classList.add("js");
+      })();
+    </script>
   </head>
   <body>
-    <div class="background-overlay"></div>
-    <div class="container">
-      <header>
-        <div class="sub-container">
-          <img
-            src="assets/adala.png"
-            alt="Benard Adala Wanyande"
-            class="profile-image image-container"
-          />
-          <h1>
-            <a href="/">Bernard Adala Wanyande</a>
-          </h1>
-          <h2>Software Engineer</h2>
-          <p class="mini-about">
-            A full-stack developer and MSc Data Science graduate specializing in
-            Generative AI.
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html" aria-label="Adala Wanyande, home">
+          <span class="brand-mark" aria-hidden="true">AW</span>
+          <span class="brand-name">Adala Wanyande</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a class="nav-resume" href="assets/Bernard_Wanyande_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" /></svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero wrap" aria-label="Introduction">
+        <div class="hero-top">
+          <img class="avatar" src="assets/adala.png" alt="Portrait of Bernard Adala Wanyande" width="56" height="56" />
+          <span class="status">
+            <span class="dot" aria-hidden="true"></span>
+            <span><strong>Software (AI) Engineer</strong> at ING</span>
+          </span>
+        </div>
+
+        <h1>I build AI that turns documents into <span class="accent">data</span>.</h1>
+
+        <p class="hero-lead">
+          I'm <strong>Bernard Adala Wanyande</strong>, a software engineer in
+          <strong>ING Wholesale Banking</strong>, working on AI-powered
+          extraction use cases. I like the part where models meet production:
+          APIs, pipelines, and the cloud infrastructure around them.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:awanyande@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-10 6L2 7" /></svg>
+            Get in touch
+          </a>
+          <a class="btn" href="https://github.com/adala-wanyande" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>
+            GitHub
+          </a>
+          <a class="btn" href="https://linkedin.com/in/adala-wanyande" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" /></svg>
+            LinkedIn
+          </a>
+          <a class="btn" href="assets/Bernard_Wanyande_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6M8 13h8M8 17h5" /></svg>
+            Resume
+          </a>
+        </div>
+      </section>
+
+      <div class="wrap">
+        <!-- About -->
+        <section id="about" class="section reveal" aria-labelledby="about-title">
+          <div class="section-label">
+            <span class="eyebrow num">01</span>
+            <h2 id="about-title">About</h2>
+          </div>
+          <div class="section-body">
+            <div class="prose">
+              <p>
+                I sit somewhere between software engineering and data science.
+                After an MSc in Computer Science (Data Science) at
+                <strong>Leiden University</strong> and a stint building
+                Generative AI tools at <strong>Unilever</strong>, I now build
+                production AI systems at <strong>ING</strong>.
+              </p>
+              <p>
+                Day to day that means Java and Python services, LLM-based
+                agents, and the DevOps work that gets them safely into
+                production on Google Cloud.
+              </p>
+            </div>
+            <div class="section-footer">
+              <a class="link-arrow forward" href="about.html">
+                More about me
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section reveal" aria-labelledby="experience-title">
+          <div class="section-label">
+            <span class="eyebrow num">02</span>
+            <h2 id="experience-title">Experience</h2>
+          </div>
+          <div class="section-body">
+            <ol class="jobs">
+              <li class="job">
+                <div class="job-date">
+                  Sep 2026 – Present<br />
+                  <span class="current">Current</span>
+                </div>
+                <div>
+                  <h3>
+                    <a href="https://www.ing.com/" target="_blank" rel="noopener noreferrer">
+                      Software (AI) Engineer <span class="company">· ING</span>
+                      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg>
+                    </a>
+                  </h3>
+                  <p class="team">Wholesale Banking</p>
+                  <p class="job-desc">
+                    Building AI-powered document extraction use cases. I develop
+                    APIs and services with Spring Boot and FastAPI, build agents
+                    on Google's Agent Platform, and ship to Google Cloud Run
+                    through automated DevOps pipelines.
+                  </p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Spring Boot</li>
+                    <li>FastAPI</li>
+                    <li>Google Agent Platform</li>
+                    <li>Cloud Run</li>
+                    <li>CI/CD</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="job">
+                <div class="job-date">Nov 2025 – Sep 2026</div>
+                <div>
+                  <h3>
+                    <a href="https://www.tudelft.nl/en/eemcs/the-faculty/departments/quantum-computer-engineering" target="_blank" rel="noopener noreferrer">
+                      Teaching Assistant, Quantum Computing <span class="company">· Q-Team</span>
+                      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg>
+                    </a>
+                  </h3>
+                  <p class="team">THUAS, TU Delft &amp; Leiden University</p>
+                  <p class="job-desc">
+                    Taught quantum computing fundamentals through lectures and
+                    lab sessions, contributed to curriculum development, and
+                    organised workshops across the university network.
+                  </p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Quantum Computing</li>
+                    <li>Teaching</li>
+                    <li>Workshops</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="job">
+                <div class="job-date">Feb 2025 – Sep 2025</div>
+                <div>
+                  <h3>
+                    <a href="https://www.unilever.nl/" target="_blank" rel="noopener noreferrer">
+                      Data Scientist, Generative AI <span class="company">· Unilever</span>
+                      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg>
+                    </a>
+                  </h3>
+                  <p class="job-desc">
+                    Automated shelf-life prediction, cutting manual analysis time
+                    by 60%. Built an AI learning assistant that turns SharePoint
+                    content into learning paths, and a RAG chatbot over
+                    proprietary company data.
+                  </p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Python</li>
+                    <li>LangChain</li>
+                    <li>OpenAI</li>
+                    <li>FastAPI</li>
+                    <li>Azure DevOps</li>
+                  </ul>
+                </div>
+              </li>
+            </ol>
+            <div class="section-footer">
+              <a class="link-arrow forward" href="experience.html">
+                Full experience
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Selected work -->
+        <section id="projects" class="section reveal" aria-labelledby="projects-title">
+          <div class="section-label">
+            <span class="eyebrow num">03</span>
+            <h2 id="projects-title">Selected work</h2>
+          </div>
+          <div class="section-body">
+            <div class="projects-grid">
+              <article class="project">
+                <div class="project-media">
+                  <img src="assets/dutch_master.png" alt="DutchMaster AI interface" loading="lazy" />
+                </div>
+                <div class="project-body">
+                  <div class="project-head">
+                    <h3>DutchMaster AI</h3>
+                    <span class="project-year">2026</span>
+                  </div>
+                  <p class="project-desc">
+                    Multi-model app for Dutch homework. Runs OpenAI, Anthropic
+                    and Gemini in parallel to analyse homework photos, explain
+                    grammar and decode idioms.
+                  </p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Next.js</li>
+                    <li>FastAPI</li>
+                    <li>OpenAI</li>
+                    <li>Anthropic</li>
+                    <li>Gemini</li>
+                  </ul>
+                  <div class="project-links">
+                    <a class="link-arrow" href="https://dutch-master-ai.vercel.app/" target="_blank" rel="noopener noreferrer">Live site <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+                    <a class="link-arrow" href="https://github.com/adala-wanyande/dutch-master-ai" target="_blank" rel="noopener noreferrer">Code <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project">
+                <div class="project-media">
+                  <img src="assets/unilever.png" alt="Enterprise RAG knowledge system" loading="lazy" />
+                </div>
+                <div class="project-body">
+                  <div class="project-head">
+                    <h3>Enterprise RAG Knowledge System</h3>
+                    <span class="project-year">2025</span>
+                  </div>
+                  <p class="project-desc">
+                    MSc thesis with Unilever: retrieval-augmented generation over
+                    internal documents using hybrid search and LLMs.
+                  </p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Python</li>
+                    <li>LangChain</li>
+                    <li>FAISS</li>
+                    <li>Streamlit</li>
+                  </ul>
+                  <div class="project-links">
+                    <span class="closed">Closed source</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project">
+                <div class="project-media">
+                  <img src="assets/youtube_subtitles.png" alt="YouTube dual-subtitle Chrome extension" loading="lazy" />
+                </div>
+                <div class="project-body">
+                  <div class="project-head">
+                    <h3>YouTube Dual Subtitles</h3>
+                    <span class="project-year">2025</span>
+                  </div>
+                  <p class="project-desc">
+                    Chrome extension that shows real-time translations above
+                    YouTube subtitles, built for language learners with the
+                    Gemini API.
+                  </p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>JavaScript</li>
+                    <li>Chrome Extension</li>
+                    <li>Gemini</li>
+                  </ul>
+                  <div class="project-links">
+                    <a class="link-arrow" href="https://github.com/adala-wanyande/youtube-dual-subtitles" target="_blank" rel="noopener noreferrer">Code <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project">
+                <div class="project-media">
+                  <img src="assets/recommender_systems.png" alt="Recommender system visualisation" loading="lazy" />
+                </div>
+                <div class="project-body">
+                  <div class="project-head">
+                    <h3>Hybrid E-Commerce Recommender</h3>
+                    <span class="project-year">2025</span>
+                  </div>
+                  <p class="project-desc">
+                    Pair-based implicit recommender framed as classification over
+                    engineered user–item features, evaluated on Recall@10.
+                  </p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Python</li>
+                    <li>LightGBM</li>
+                    <li>Random Forest</li>
+                    <li>SVD</li>
+                  </ul>
+                  <div class="project-links">
+                    <a class="link-arrow" href="https://github.com/adala-wanyande/recommender-systems" target="_blank" rel="noopener noreferrer">Code <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+                    <a class="link-arrow" href="https://www.kaggle.com/competitions/recommender-system-challenge-2025-2425-s-2/leaderboard" target="_blank" rel="noopener noreferrer">Kaggle <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="section-footer">
+              <a class="link-arrow forward" href="projects.html">
+                Browse all projects
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="contact">
+          <span class="eyebrow">Contact</span>
+          <h2>Let's talk.</h2>
+          <p>
+            AI engineering, document extraction, or a LeetCode session: my inbox
+            is open at <strong>awanyande@gmail.com</strong>.
           </p>
-          <nav class="" aria-label="In-page jump links">
-            <ul>
-              <li>
-                <a href="#about">
-                  <span class="nav-indicator"></span>
-                  <span class="nav-text">About</span>
-                </a>
-              </li>
-              <li>
-                <a href="#experience">
-                  <span class="nav-indicator"></span>
-                  <span class="nav-text">Experience</span>
-                </a>
-              </li>
-              <li>
-                <a href="#projects">
-                  <span class="nav-indicator"></span>
-                  <span class="nav-text">Projects</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:awanyande@gmail.com">Send an email</a>
+            <a class="btn" href="https://linkedin.com/in/adala-wanyande" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+          </div>
         </div>
-        <div class="sub-container">
-          <ul class="socials-unordered" aria-label="Social media">
-            <li class="socials-list">
-              <a
-                href="https://github.com/adala-wanyande"
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="GitHub (opens in a new tab)"
-              >
-                <!-- <span class="hidden">GitHub</span> -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <!-- LINKEDIN (Target for Arrow) -->
-            <li class="socials-list">
-              <a
-                href="https://linkedin.com/in/adala-wanyande"
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="LinkedIn"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill=""
-                  height="26"
-                  width="26"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
-                  ></path>
-                </svg>
-              </a>
-            </li>
-            <li class="socials-list">
-              <a
-                href="mailto:awanyande@gmail.com"
-                aria-label="Send an email to awanyande@gmail.com"
-              >
-                <!-- <span class="hidden">Email</span> -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill=""
-                  height="28"
-                  width="28"
-                  viewBox="0 0 75.294 75.294"
-                  class=""
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M66.097,12.089h-56.9C4.126,12.089,0,16.215,0,21.286v32.722c0,5.071,4.126,9.197,9.197,9.197h56.9
-                                        c5.071,0,9.197-4.126,9.197-9.197V21.287C75.295,16.215,71.169,12.089,66.097,12.089z M61.603,18.089L37.647,33.523L13.691,18.089
-                                        H61.603z M66.097,57.206h-56.9C7.434,57.206,6,55.771,6,54.009V21.457l29.796,19.16c0.04,0.025,0.083,0.042,0.124,0.065
-                                        c0.043,0.024,0.087,0.047,0.131,0.069c0.231,0.119,0.469,0.215,0.712,0.278c0.025,0.007,0.05,0.01,0.075,0.016
-                                        c0.267,0.063,0.537,0.102,0.807,0.102c0.001,0,0.002,0,0.002,0c0.002,0,0.003,0,0.004,0c0.27,0,0.54-0.038,0.807-0.102
-                                        c0.025-0.006,0.05-0.009,0.075-0.016c0.243-0.063,0.48-0.159,0.712-0.278c0.044-0.022,0.088-0.045,0.131-0.069
-                                        c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.206,66.097,57.206z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li class="socials-list">
-              <a
-                href="assets/Bernard_Wanyande_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Resume (opens in a new tab)"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-                  />
-                  <path d="M8 12h8v2H8zM8 16h8v2H8zM8 8h2v2H8z" />
-                </svg>
-              </a>
-            </li>
+        <div class="footer-bottom">
+          <p>&copy; <span data-year-now>2026</span> Bernard Adala Wanyande</p>
+          <ul>
+            <li><a href="https://github.com/adala-wanyande" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/adala-wanyande" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://leetcode.com/u/adala-wanyande/" target="_blank" rel="noopener noreferrer">LeetCode</a></li>
+            <li><a href="assets/Bernard_Wanyande_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
           </ul>
-          <!-- THE STICKY NOTE -->
-          <div class="sticky-note">
-            <p>Looking for a LeetCode buddy?<br /><b>Let's connect!</b></p>
-          </div>
         </div>
-      </header>
-      <main>
-        <section id="about" class="about-section" aria-label="About me">
-          <div class="sticky-container">
-            <h2 class="about-heading">About</h2>
-          </div>
-          <div class="about-content">
-            <p class="description">
-              I combine strong software development skills with data science
-              expertise to build intelligent, impactful applications, focusing
-              on leveraging AI to create innovative and efficient digital
-              solutions.
-            </p>
-            <div>
-              <a class="job-title-details" href="about.html">
-                <p class="company">
-                  Learn More About Me
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="company-svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </p>
-              </a>
-            </div>
-          </div>
-        </section>
-        <section
-          id="experience"
-          class="experience-section"
-          aria-label="Experience"
-        >
-          <div class="sticky-container">
-            <h2 class="experience-heading">Experience</h2>
-          </div>
-          <div class="experience-content">
-            <div class="overlay">
-              <div class="dates-container">
-                <p class="dates">NOV 2025 - PRESENT</p>
-              </div>
-              <div>
-                <a
-                  class="job-title-details"
-                  href="https://www.tudelft.nl/en/eemcs/the-faculty/departments/quantum-computer-engineering"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p class="job-title">
-                    Teaching Assistant: Quantum Computing ·
-                  </p>
-                  <p class="company">
-                    Q-Team (THUAS, TU Delft, Leiden University)
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="company-svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </p>
-                </a>
-                <p class="section-content">
-                  Teaching fundamental quantum computing concepts to students
-                  through lectures and practical lab sessions. Contributing to
-                  curriculum development and course material creation.
-                  Organizing educational workshops and events to promote quantum
-                  computing education across the collaborative university
-                  network.
-                </p>
-                <ul class="technologies-list">
-                  <li>
-                    <div class="tech-badge">Quantum Computing</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">Project Planning</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">Event Planning</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">Educational Workshops</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="overlay">
-              <div class="dates-container">
-                <p class="dates">FEB 2025 - SEP 2025</p>
-              </div>
-              <div>
-                <a
-                  class="job-title-details"
-                  href="https://www.unilever.nl/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p class="job-title">
-                    Data Scientist: Generative AI Specialist ·
-                  </p>
-                  <p class="company">
-                    Unilever
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="company-svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </p>
-                </a>
-                <p class="section-content">
-                  Automated shelf life prediction using statistical modeling and
-                  machine learning, reducing manual analysis time by 60% and
-                  increasing forecast accuracy by 30%. Developed an AI-powered
-                  learning assistant that summarizes SharePoint content into
-                  structured learning paths, cutting onboarding time by 40% and
-                  boosting knowledge retrieval efficiency by 50%. Worked on a
-                  RAG chatbot on propriety company data using state of the art
-                  retrieval models and Open LLMs.
-                </p>
-                <ul class="technologies-list">
-                  <li>
-                    <div class="tech-badge">Python</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">LangChain</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">OpenAI APIs</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">NextJS</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">FastAPI</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">Azure DevOps</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">Microsoft Copilot</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="overlay">
-              <div class="dates-container">
-                <p class="dates">AUG 2024 - JAN 2025</p>
-              </div>
-              <div>
-                <a
-                  class="job-title-details"
-                  href="https://www.riskafrica.co.ke/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p class="job-title">Junior Fullstack Developer ·</p>
-                  <p class="company">
-                    Risk Africa Innovatis
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="company-svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </p>
-                </a>
-                <p class="section-content">
-                  Developed Next.js frontend components and FastAPI
-                  microservices for the NGCDF project, streamlining fund
-                  management. I also integrated OpenAI’s LLM for translations,
-                  reducing development time by 75%, and led the migration to a
-                  microservices architecture, enhancing system efficiency.
-                </p>
-                <ul class="technologies-list">
-                  <li>
-                    <div class="tech-badge">Python</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">TypeScript</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">NextJS</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">FastAPI</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">Pandas</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">Agile</div>
-                  </li>
-                  <li>
-                    <div class="tech-badge">Jira</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div>
-              <a class="job-title-details" href="experience.html">
-                <p class="company">
-                  View Full Experience
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="company-svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </p>
-              </a>
-            </div>
-          </div>
-        </section>
-        <section id="projects" class="projects-section" aria-label="Projects">
-          <div class="sticky-container">
-            <h2 class="projects-heading">Projects</h2>
-          </div>
-          <div class="overlay">
-            <div class="image-container">
-              <img
-                src="assets/dutch_master.png"
-                alt="DutchMaster AI Application"
-              />
-            </div>
-            <div class="overlay-image">
-              <div class="project-title-details">
-                <p class="project-title">DutchMaster AI</p>
-                <a
-                  class="project-links"
-                  href="https://github.com/adala-wanyande/dutch-master-ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="company-svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z"
-                    ></path>
-                    <path
-                      d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z"
-                    ></path>
-                  </svg>
-                  Github Repo
-                </a>
-                <a
-                  class="project-links"
-                  href="https://dutch-master-ai.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="company-svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z"
-                    ></path>
-                    <path
-                      d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z"
-                    ></path>
-                  </svg>
-                  Live Site
-                </a>
-              </div>
-              <p class="section-content">
-                A multi-model web application for Dutch homework analysis. Uses
-                three AI providers (OpenAI, Anthropic, Google) in parallel to
-                analyze homework images, explain grammar rules, and decode Dutch
-                idioms. Features 10 homework types, 3 model tiers, and PDF
-                export.
-              </p>
-              <ul class="technologies-list">
-                <li>
-                  <div class="tech-badge">Next.js</div>
-                </li>
-                <li>
-                  <div class="tech-badge">FastAPI</div>
-                </li>
-                <li>
-                  <div class="tech-badge">OpenAI</div>
-                </li>
-                <li>
-                  <div class="tech-badge">Anthropic</div>
-                </li>
-                <li>
-                  <div class="tech-badge">Gemini</div>
-                </li>
-                <li>
-                  <div class="tech-badge">Tailwind CSS</div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="overlay">
-            <div class="image-container">
-              <img
-                src="assets/recommender_systems.png"
-                alt="Visualization of Recommender System"
-              />
-            </div>
-            <div class="overlay-image">
-              <div class="project-title-details">
-                <p class="project-title">
-                  Hybrid Pair Based Implicit Recommender
-                </p>
-                <a
-                  class="project-links"
-                  href="https://www.kaggle.com/competitions/recommender-system-challenge-2025-2425-s-2/leaderboard"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="company-svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z"
-                    ></path>
-                    <path
-                      d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z"
-                    ></path>
-                  </svg>
-                  Live Demo: Kaggle Competition Link
-                </a>
-                <a
-                  class="project-links"
-                  href="https://github.com/adala-wanyande/recommender-systems"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="company-svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z"
-                    ></path>
-                    <path
-                      d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z"
-                    ></path>
-                  </svg>
-                  Github Repo
-                </a>
-              </div>
-              <p class="section-content">
-                Developed a hybrid pair-based implicit recommender system for
-                e-commerce, focusing on user interactions and item metadata.
-                Leveraged a classification approach, engineering features for
-                user-item pairs and training multiple machine learning
-                classifiers (Random Forest, LightGBM, etc.). The system provides
-                personalized top-10 recommendations, evaluated based on
-                Recall@10.
-              </p>
-              <ul class="technologies-list">
-                <li>
-                  <div class="tech-badge">Python</div>
-                </li>
-                <li>
-                  <div class="tech-badge">SVD</div>
-                </li>
-                <li>
-                  <div class="tech-badge">Random Forests Classifier</div>
-                </li>
-                <li>
-                  <div class="tech-badge">LightGBM</div>
-                </li>
-                <li>
-                  <div class="tech-badge">Logistic Regression</div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <a class="job-title-details" href="projects.html">
-              <p class="company">
-                View Project Archive
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="company-svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </p>
-            </a>
-          </div>
-        </section>
-      </main>
-    </div>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

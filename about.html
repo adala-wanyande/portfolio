@@ -1,169 +1,249 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bernard Adala Wanyande | About Me</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About · Adala Wanyande</title>
+    <meta
+      name="description"
+      content="About Bernard Adala Wanyande: background, toolbox, languages and life beyond work."
+    />
+    <meta property="og:title" content="About · Adala Wanyande" />
+    <meta
+      property="og:description"
+      content="About Bernard Adala Wanyande: background, toolbox, languages and life beyond work."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adala-wanyande.github.io/portfolio/about.html" />
     <link rel="icon" href="assets/favicon.ico" />
-    <link rel="stylesheet" href="about.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script>
+      (function () {
+        var t;
+        try {
+          t = localStorage.getItem("theme");
+        } catch (e) {}
+        if (!t) {
+          t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.dataset.theme = t;
+        document.documentElement.classList.add("js");
+      })();
+    </script>
   </head>
   <body>
-    <!-- 1. NAVIGATION -->
-    <nav class="navbar">
-      <!-- Left: Back -->
-      <a href="index.html" class="nav-link">← Home</a>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <!-- Middle: Brand -->
-      <a href="index.html" class="nav-brand">Bernard Adala Wanyande</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html" aria-label="Adala Wanyande, home">
+          <span class="brand-mark" aria-hidden="true">AW</span>
+          <span class="brand-name">Adala Wanyande</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="about.html" aria-current="page">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a class="nav-resume" href="assets/Bernard_Wanyande_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" /></svg>
+          </button>
+        </nav>
+      </div>
+    </header>
 
-      <!-- Right: Back to Home (completing the loop) -->
-      <a href="projects.html" class="nav-link">Projects →</a>
-    </nav>
-
-    <!-- 2. HERO HEADER -->
-    <section class="hero">
-      <h1>A little bit more about me</h1>
-      <p>A message to recruiters, friends and potential clients:</p>
-    </section>
-
-    <!-- 3. BENTO GRID CONTENT -->
-    <div class="bento-container">
-      <!-- CARD 1: Career / Graduation (Large width) -->
-      <div class="bento-card span-2">
-        <!-- <div class="card-icon">🎓</div> -->
-        <h2 class="card-title">In terms of education</h2>
-        <p class="card-text">
-          I will be graduating in
-          <span class="highlight">September 2026</span> with an MSc in Computer
-          Science (Data Science) from Leiden University. <br /><br />
-          Combining my background in software engineering with advanced data
-          science, I am seeking roles where I can bridge the gap between complex
-          data and production-ready applications. I am open to opportunities in:
+    <main id="main" class="wrap">
+      <header class="page-head">
+        <span class="eyebrow">About</span>
+        <h1>A bit more about me</h1>
+        <p>
+          Software engineer, data scientist by training, and a firm believer
+          that the most interesting AI work happens after the notebook.
         </p>
-        <div class="role-tags">
-          <span class="role-badge">Frontend Engineering</span>
-          <span class="role-badge">Backend / Full Stack</span>
-          <span class="role-badge">Machine Learning</span>
-          <span class="role-badge">Generative AI</span>
-          <span class="role-badge">Data Science</span>
+      </header>
+
+      <section class="section reveal" aria-labelledby="story-title">
+        <div class="section-label">
+          <span class="eyebrow num">01</span>
+          <h2 id="story-title">Story</h2>
+        </div>
+        <div class="section-body prose">
+          <p>
+            I started out shipping websites and mobile apps in
+            <strong>Nairobi</strong>: internships at Willfreight, @iLabAfrica
+            and Kodally, then full-stack work at Risk Africa Innovatis, where I
+            first put LLMs into a production system.
+          </p>
+          <p>
+            That pulled me towards data science. I moved to the Netherlands for
+            an <strong>MSc in Computer Science (Data Science)</strong> at
+            <strong>Leiden University</strong>, spent 2025 building
+            Generative AI tools at <strong>Unilever</strong>, and taught quantum
+            computing as a TA on the side.
+          </p>
+          <p>
+            Since September 2026 I've been a <strong>Software (AI) Engineer at
+            ING</strong> in Wholesale Banking, working on AI-powered document
+            extraction.
+          </p>
+        </div>
+      </section>
+
+      <section class="section reveal" aria-labelledby="stack-title">
+        <div class="section-label">
+          <span class="eyebrow num">02</span>
+          <h2 id="stack-title">Toolbox</h2>
+        </div>
+        <div class="section-body">
+          <div class="stack-list">
+            <div>
+              <span class="eyebrow">Languages</span>
+              <ul class="tags">
+                <li>Python</li>
+                <li>Java</li>
+                <li>TypeScript</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>PHP</li>
+                <li>Dart</li>
+              </ul>
+            </div>
+            <div>
+              <span class="eyebrow">Backend</span>
+              <ul class="tags">
+                <li>Spring Boot</li>
+                <li>FastAPI</li>
+                <li>REST APIs</li>
+                <li>Laravel</li>
+                <li>Express</li>
+              </ul>
+            </div>
+            <div>
+              <span class="eyebrow">AI &amp; Data</span>
+              <ul class="tags">
+                <li>Google Agent Platform</li>
+                <li>LangChain</li>
+                <li>RAG</li>
+                <li>OpenAI</li>
+                <li>Anthropic</li>
+                <li>Gemini</li>
+                <li>PyTorch</li>
+                <li>Pandas</li>
+              </ul>
+            </div>
+            <div>
+              <span class="eyebrow">Cloud &amp; DevOps</span>
+              <ul class="tags">
+                <li>Google Cloud Run</li>
+                <li>CI/CD Pipelines</li>
+                <li>Azure DevOps</li>
+                <li>Firebase</li>
+                <li>Vercel</li>
+              </ul>
+            </div>
+            <div>
+              <span class="eyebrow">Frontend</span>
+              <ul class="tags">
+                <li>Next.js</li>
+                <li>React</li>
+                <li>Vue.js</li>
+                <li>Flutter</li>
+                <li>Tailwind CSS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" aria-labelledby="more-title">
+        <div class="section-label">
+          <span class="eyebrow num">03</span>
+          <h2 id="more-title">Beyond work</h2>
+        </div>
+        <div class="section-body">
+          <div class="cards">
+            <div class="card">
+              <h3>Languages</h3>
+              <ul class="languages">
+                <li><span>English</span><span>Native / fluent</span></li>
+                <li><span>Swahili</span><span>Native / fluent</span></li>
+                <li><span>Dutch</span><span>B2, improving</span></li>
+                <li><span>French</span><span>Next goal</span></li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>International</h3>
+              <p>
+                I've lived and worked in Kenya, Estonia and the Netherlands, and
+                I do my best work in international teams. Learning the language
+                is how I get to know a place, which is why my Dutch keeps
+                getting better.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>DSA &amp; interview prep</h3>
+              <p>
+                Into data structures, algorithms or system design prep? I'm
+                always up for a practice partner.
+              </p>
+              <div class="card-links">
+                <a class="link-arrow" href="https://leetcode.com/u/adala-wanyande/" target="_blank" rel="noopener noreferrer">LeetCode <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+                <a class="link-arrow" href="https://www.tryexponent.com/users/21d74db0-4544-4b35-aea6-d457c0165964" target="_blank" rel="noopener noreferrer">Exponent <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Side projects</h3>
+              <p>
+                Outside work I keep building small web and AI tools, usually
+                ones that help me learn Dutch. Happy to talk with students and
+                early-career engineers about getting started.
+              </p>
+              <div class="card-links">
+                <a class="link-arrow" href="https://github.com/adala-wanyande" target="_blank" rel="noopener noreferrer">GitHub <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+                <a class="link-arrow" href="projects.html">Projects <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" /></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="contact">
+          <span class="eyebrow">Contact</span>
+          <h2>Let's talk.</h2>
+          <p>
+            AI engineering, document extraction, or a LeetCode session: my inbox
+            is open at <strong>awanyande@gmail.com</strong>.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:awanyande@gmail.com">Send an email</a>
+            <a class="btn" href="https://linkedin.com/in/adala-wanyande" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span data-year-now>2026</span> Bernard Adala Wanyande</p>
+          <ul>
+            <li><a href="https://github.com/adala-wanyande" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/adala-wanyande" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://leetcode.com/u/adala-wanyande/" target="_blank" rel="noopener noreferrer">LeetCode</a></li>
+            <li><a href="assets/Bernard_Wanyande_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+          </ul>
         </div>
       </div>
-
-      <!-- CARD 2: Languages (Tall vertical) -->
-      <div class="bento-card span-row-2">
-        <!-- <div class="card-icon">🌍</div> -->
-        <h2 class="card-title">Languages</h2>
-        <p class="card-text">
-          Having worked and lived in
-          <span class="highlight">The Netherlands</span>,
-          <span class="highlight">Estonia</span>, and
-          <span class="highlight">Nairobi</span>, I thrive in international
-          environments. I believe language is the key to connecting with people
-          and understanding environments.
-        </p>
-
-        <div class="lang-item">
-          <div class="lang-header">
-            <span>English</span>
-            <span>Native/Fluent</span>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 100%"></div>
-          </div>
-        </div>
-        <div class="lang-item">
-          <div class="lang-header mt-4">
-            <span>Swahili</span>
-            <span>Native/Fluent</span>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 100%"></div>
-          </div>
-        </div>
-
-        <div class="lang-item">
-          <div class="lang-header">
-            <span>Dutch</span>
-            <span>B2 Intermediate</span>
-          </div>
-          <div class="progress-bar mt-4">
-            <div class="progress-fill" style="width: 80%"></div>
-          </div>
-        </div>
-
-        <div class="lang-item">
-          <div class="lang-header">
-            <span>French</span>
-            <span>Next Goal</span>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 0%"></div>
-          </div>
-        </div>
-
-        <p class="card-text" style="margin-top: 1rem; font-size: 0.85rem">
-          <em>Currently working towards professional fluency in Dutch.</em>
-        </p>
-      </div>
-
-      <!-- CARD 3: Interview Prep (Standard) -->
-      <div class="bento-card">
-        <!-- <div class="card-icon">⚔️</div> -->
-        <h2 class="card-title">
-          If you are interested in DSA & interview prep
-        </h2>
-        <p class="card-text">
-          If you are interested in data structures and algorithms and system
-          design interview prep, you might have just found yourself a friend.
-          Let's connect!
-        </p>
-        <div>
-          <a
-            href="https://leetcode.com/u/adala-wanyande/"
-            target="_blank"
-            class="action-btn"
-          >
-            LeetCode Profile ↗
-          </a>
-          <a
-            href="https://www.tryexponent.com/users/21d74db0-4544-4b35-aea6-d457c0165964"
-            target="_blank"
-            class="action-btn"
-          >
-            Exponent Profile ↗
-          </a>
-        </div>
-      </div>
-
-      <!-- CARD 4: Future Plans (Standard) -->
-      <div class="bento-card">
-        <!-- <div class="card-icon">🚀</div> -->
-        <h2 class="card-title">Post-graduation</h2>
-        <p class="card-text">
-          I plan on executing several mobile & web projects throughout 2026.
-          <br /><br />
-          I am open to <strong>remote contracts</strong> and
-          <strong>collaborations</strong>. I am also looking to mentor and
-          employ interns who need practical work experience.
-        </p>
-        <div>
-          <a
-            href="https://github.com/adala-wanyande/"
-            target="_blank"
-            class="action-btn"
-          >
-            View GitHub Activity ↗
-          </a>
-          <a href="mailto:awanyande@gmail.com" class="action-btn">
-            Get in Touch ✉️
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 4. FOOTER -->
-    <footer>
-      <p>&copy; 2026 Bernard Adala Wanyande. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
